@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About MindWell - Mental Health & Wellness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#4A90E2", secondary: "#7ED3B2" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+        font-family: 'Open Sans', sans-serif;
+        color: #333;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Merriweather', serif;
+      }
+      .hero-section {
+        background-image: url('#');
+        background-size: cover;
+        background-position: center;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #4A90E2;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .custom-checkbox {
+        position: relative;
+        padding-left: 28px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .custom-checkbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #fff;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+      }
+      .custom-checkbox:hover input ~ .checkmark {
+        border-color: #b3b3b3;
+      }
+      .custom-checkbox input:checked ~ .checkmark {
+        background-color: #4A90E2;
+        border-color: #4A90E2;
+      }
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      .custom-checkbox input:checked ~ .checkmark:after {
+        display: block;
+      }
+      .custom-checkbox .checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+      .timeline-dot:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: #e5e7eb;
+        transform: translateX(-50%);
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-['Pacifico'] text-primary">MindWell</a>
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="dashboard.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >Services</a
+          >
+          <a
+            href="resources.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >Resources</a
+          >
+          <a
+            href="faq.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >FAQ</a
+          >
+          <a
+            href="contact.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a
+            href="login.html"
+            class="hidden md:block text-gray-800 font-medium hover:text-primary transition"
+            >Login</a
+          >
+          <a
+            href="signup.html"
+            class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap"
+            >Sign Up</a
+            >
+          <button
+            class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700"
+          >
+            <i class="ri-menu-line ri-lg"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section min-h-[600px] flex items-center">
+      <div class="container mx-auto px-4 w-full">
+        <div class="max-w-2xl py-16 md:py-24">
+          <h1
+            class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+          >
+            About MindWell
+          </h1>
+          <p class="text-lg text-gray-700 mb-8">
+            Discover our mission, values, and the dedicated team behind our
+            commitment to transforming mental healthcare.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="dashboard.html"
+              class="inline-flex items-center text-primary bg-white px-5 py-2 !rounded-button shadow-sm font-medium whitespace-nowrap"
+            >
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-arrow-left-line"></i>
+              </div>
+              Back to Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Mission & Values Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900">Our Mission & Values</h2>
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+            Guided by compassion and evidence-based practices, we're committed
+            to making mental healthcare accessible to all.
+          </p>
+        </div>
+        <div
+          class="bg-gray-50 p-8 rounded-lg border border-gray-100 shadow-sm mb-16"
+        >
+          <h3 class="text-2xl font-semibold text-gray-900 text-center mb-4">
+            Our Mission
+          </h3>
+          <p class="text-lg text-gray-700 text-center max-w-3xl mx-auto">
+            At MindWell, our mission is to transform mental healthcare by
+            providing accessible, personalized, and evidence-based services that
+            empower individuals to overcome challenges, build resilience, and
+            achieve lasting well-being.
+          </p>
+        </div>
+        <h3 class="text-2xl font-semibold text-gray-900 text-center mb-8">
+          Core Values
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Value 1 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mb-4"
+            >
+              <i class="ri-heart-line text-primary ri-xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold text-gray-900 mb-2">Compassion</h4>
+            <p class="text-gray-600">
+              We approach every individual with genuine care, empathy, and
+              understanding, recognizing the courage it takes to seek support.
+            </p>
+          </div>
+          <!-- Value 2 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mb-4"
+            >
+              <i class="ri-shield-check-line text-primary ri-xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold text-gray-900 mb-2">Excellence</h4>
+            <p class="text-gray-600">
+              We are committed to the highest standards of professional care,
+              continuously improving our services through evidence-based
+              practices and ongoing education.
+            </p>
+          </div>
+          <!-- Value 3 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mb-4"
+            >
+              <i class="ri-user-settings-line text-primary ri-xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold text-gray-900 mb-2">
+              Personalization
+            </h4>
+            <p class="text-gray-600">
+              We recognize that each person's journey is unique, tailoring our
+              approach to individual needs, preferences, and circumstances.
+            </p>
+          </div>
+          <!-- Value 4 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mb-4"
+            >
+              <i class="ri-lock-line text-primary ri-xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold text-gray-900 mb-2">
+              Confidentiality
+            </h4>
+            <p class="text-gray-600">
+              We uphold the highest standards of privacy and trust, creating
+              safe spaces where clients can share openly without judgment.
+            </p>
+          </div>
+          <!-- Value 5 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mb-4"
+            >
+              <i class="ri-global-line text-primary ri-xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold text-gray-900 mb-2">
+              Accessibility
+            </h4>
+            <p class="text-gray-600">
+              We strive to make mental healthcare available to all through
+              flexible formats, sliding scale fees, and culturally responsive
+              services.
+            </p>
+          </div>
+          <!-- Value 6 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mb-4"
+            >
+              <i class="ri-team-line text-primary ri-xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold text-gray-900 mb-2">Community</h4>
+            <p class="text-gray-600">
+              We foster connection and belonging, recognizing that healing often
+              happens in relationship with others who understand and support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our History Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900">Our History</h2>
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+            From humble beginnings to becoming a leading mental health provider,
+            our journey reflects our commitment to transforming lives.
+          </p>
+        </div>
+        <div class="relative timeline-dot">
+          <!-- Timeline Item 1 -->
+          <div class="flex flex-col md:flex-row mb-16">
+            <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0">
+              <div
+                class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 h-full"
+              >
+                <div class="flex items-center mb-4">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white font-semibold text-lg mr-3"
+                  >
+                    <i class="ri-flag-line"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-900">
+                    2022: Foundation
+                  </h3>
+                </div>
+                <p class="text-gray-600">
+                  MindWell was founded by CSBS students with a vision to 
+                  create a mental health practice that combined clinical 
+                  excellence with genuine compassion. Starting with just 
+                  three therapists in a small office, they focused on
+                  providing personalized care to their local community.
+                </p>
+              </div>
+            </div>
+            <div class="md:w-1/2 md:pl-12 flex justify-center md:justify-start">
+              <div
+                class="w-16 h-16 flex items-center justify-center rounded-full bg-primary text-white text-xl font-bold border-4 border-white shadow-md"
+              >
+                2022
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Item 2 -->
+          <div class="flex flex-col md:flex-row-reverse mb-16">
+            <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+              <div
+                class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 h-full"
+              >
+                <div class="flex items-center mb-4">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white font-semibold text-lg mr-3"
+                  >
+                    <i class="ri-building-line"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-900">
+                    2023: Expansion
+                  </h3>
+                </div>
+                <p class="text-gray-600">
+                  After five years of steady growth and positive client
+                  outcomes, MindWell expanded to a larger facility and added
+                  specialized services including group therapy, meditation
+                  classes, and workshops. Our team grew to 15 therapists with
+                  diverse specializations to better serve our growing client
+                  base.
+                </p>
+              </div>
+            </div>
+            <div class="md:w-1/2 md:pr-12 flex justify-center md:justify-end">
+              <div
+                class="w-16 h-16 flex items-center justify-center rounded-full bg-primary text-white text-xl font-bold border-4 border-white shadow-md"
+              >
+                2023
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Item 3 -->
+          <div class="flex flex-col md:flex-row mb-16">
+            <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0">
+              <div
+                class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 h-full"
+              >
+                <div class="flex items-center mb-4">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white font-semibold text-lg mr-3"
+                  >
+                    <i class="ri-global-line"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-900">
+                    2024: Digital Transformation
+                  </h3>
+                </div>
+                <p class="text-gray-600">
+                  Recognizing the need for greater accessibility, MindWell
+                  launched our telehealth platform, allowing clients to access
+                  therapy from anywhere. We also developed our first mobile app
+                  with guided meditations, mood tracking, and self-help
+                  resources. This innovation helped us reach clients in rural
+                  and underserved areas.
+                </p>
+              </div>
+            </div>
+            <div class="md:w-1/2 md:pl-12 flex justify-center md:justify-start">
+              <div
+                class="w-16 h-16 flex items-center justify-center rounded-full bg-primary text-white text-xl font-bold border-4 border-white shadow-md"
+              >
+                2024
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Item 4 -->
+          <div class="flex flex-col md:flex-row-reverse">
+            <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+              <div
+                class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 h-full"
+              >
+                <div class="flex items-center mb-4">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white font-semibold text-lg mr-3"
+                  >
+                    <i class="ri-heart-pulse-line"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-900">
+                    Today: Leading Provider
+                  </h3>
+                </div>
+                <p class="text-gray-600">
+                  Today, MindWell has grown into a comprehensive mental health
+                  organization with multiple locations, over 50 licensed
+                  therapists, and a suite of digital resources. We've helped
+                  more than 10,000 clients on their mental health journeys and
+                  continue to innovate with research-backed approaches to
+                  therapy and wellness.
+                </p>
+              </div>
+            </div>
+            <div class="md:w-1/2 md:pr-12 flex justify-center md:justify-end">
+              <div
+                class="w-16 h-16 flex items-center justify-center rounded-full bg-primary text-white text-xl font-bold border-4 border-white shadow-md"
+              >
+                2025
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our Team Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900">Meet Our Team</h2>
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+            Our diverse team of licensed professionals brings expertise,
+            compassion, and dedication to every client interaction.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Team Member 1 -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="h-64 bg-gray-100">
+              <img
+                src="#"
+                alt="Dr. Eleanor Richards"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900">
+                Dr. Eleanor Richards, Ph.D
+              </h3>
+              <p class="text-primary font-medium">
+                Founder & Clinical Director
+              </p>
+              <p class="mt-2 text-gray-600">
+                Clinical Psychologist with over 25 years of experience
+                specializing in trauma recovery and anxiety disorders. Dr.
+                Richards leads our clinical team with compassion and
+                evidence-based approaches.
+              </p>
+              <div class="mt-4 flex space-x-3">
+                <a href="#" class="text-gray-400 hover:text-primary">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-linkedin-fill"></i>
+                  </div>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-primary">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-twitter-x-fill"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 2 -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="h-64 bg-gray-100">
+              <img
+                src="#"
+                alt="Dr. Marcus Chen"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900">
+                Dr. Marcus Chen, Psy.D
+              </h3>
+              <p class="text-primary font-medium">
+                Co-Founder & Research Director
+              </p>
+              <p class="mt-2 text-gray-600">
+                Specializing in cognitive behavioral therapy and
+                mindfulness-based interventions, Dr. Chen leads our research
+                initiatives and develops innovative treatment protocols.
+              </p>
+              <div class="mt-4 flex space-x-3">
+                <a href="#" class="text-gray-400 hover:text-primary">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-linkedin-fill"></i>
+                  </div>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-primary">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-twitter-x-fill"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 3 -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="h-64 bg-gray-100">
+              <img
+                src="#"
+                alt="Dr. Amara Johnson"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900">
+                Dr. Amara Johnson, LMFT
+              </h3>
+              <p class="text-primary font-medium">Clinical Supervisor</p>
+              <p class="mt-2 text-gray-600">
+                With expertise in family systems and cultural competence, Dr.
+                Johnson supervises our therapy team and specializes in
+                relationship counseling and intergenerational trauma.
+              </p>
+              <div class="mt-4 flex space-x-3">
+                <a href="#" class="text-gray-400 hover:text-primary">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-linkedin-fill"></i>
+                  </div>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-primary">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-twitter-x-fill"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 4 -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="h-64 bg-gray-100">
+              <img
+                src="#"
+                alt="Dr. Carlos Mendez"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900">
+                Dr. Carlos Mendez, Ph.D
+              </h3>
+              <p class="text-primary font-medium">Director of Group Programs</p>
+              <p class="mt-2 text-gray-600">
+                Dr. Mendez develops and leads our innovative group therapy
+                programs, specializing in depression, grief counseling, and
+                building resilience through community support.
+              </p>
+              <div class="mt-4 flex space-x-3">
+                <a href="#" class="text-gray-400 hover:text-primary">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-linkedin-fill"></i>
+                  </div>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-primary">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-twitter-x-fill"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 5 -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="h-64 bg-gray-100">
+              <img
+                src="#"
+                alt="Sarah Williams"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900">
+                Sarah Williams, LCSW
+              </h3>
+              <p class="text-primary font-medium">
+                Mindfulness Program Director
+              </p>
+              <p class="mt-2 text-gray-600">
+                With certification in MBSR and trauma-informed mindfulness,
+                Sarah leads our meditation programs and integrates mindfulness
+                practices into therapeutic approaches.
+              </p>
+              <div class="mt-4 flex space-x-3">
+                <a href="#" class="text-gray-400 hover:text-primary">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-linkedin-fill"></i>
+                  </div>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-primary">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-twitter-x-fill"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 6 -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="h-64 bg-gray-100">
+              <img
+                src="#"
+                alt="Dr. Robert Thompson"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900">
+                Dr. Robert Thompson, Ph.D
+              </h3>
+              <p class="text-primary font-medium">
+                Addiction Recovery Specialist
+              </p>
+              <p class="mt-2 text-gray-600">
+                With over 20 years of experience in addiction treatment, Dr.
+                Thompson leads our substance use recovery programs and
+                specializes in dual diagnosis treatment.
+              </p>
+              <div class="mt-4 flex space-x-3">
+                <a href="#" class="text-gray-400 hover:text-primary">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-linkedin-fill"></i>
+                  </div>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-primary">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-twitter-x-fill"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 text-center">
+          <a
+            href="#"
+            class="inline-flex items-center px-6 py-3 border border-primary text-primary bg-white !rounded-button font-medium whitespace-nowrap"
+          >
+            View Full Team
+            <div class="w-5 h-5 flex items-center justify-center ml-2">
+              <i class="ri-arrow-right-line"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Treatment Approach Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900">
+            Our Treatment Approach
+          </h2>
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+            We combine evidence-based practices with personalized care to
+            address the unique needs of each individual.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div
+              class="bg-white p-8 rounded-lg shadow-sm border border-gray-100"
+            >
+              <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+                The MindWell Method
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Our approach integrates multiple evidence-based therapeutic
+                modalities tailored to each client's unique needs. We believe in
+                treating the whole person—mind, body, and spirit—rather than
+                just addressing symptoms.
+              </p>
+              <div class="space-y-6">
+                <div class="flex">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mr-4 flex-shrink-0 mt-1"
+                  >
+                    <i class="ri-mental-health-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-1">
+                      Comprehensive Assessment
+                    </h4>
+                    <p class="text-gray-600">
+                      We begin with a thorough evaluation to understand your
+                      unique challenges, strengths, history, and goals, creating
+                      a foundation for personalized treatment.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mr-4 flex-shrink-0 mt-1"
+                  >
+                    <i class="ri-user-settings-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-1">
+                      Personalized Treatment Planning
+                    </h4>
+                    <p class="text-gray-600">
+                      Based on your assessment, we develop a customized
+                      treatment plan that integrates the most effective
+                      therapeutic approaches for your specific situation.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mr-4 flex-shrink-0 mt-1"
+                  >
+                    <i class="ri-team-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-1">
+                      Collaborative Care
+                    </h4>
+                    <p class="text-gray-600">
+                      We work together as partners in your healing journey,
+                      regularly reviewing progress and adjusting approaches to
+                      ensure you're moving toward your goals.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mr-4 flex-shrink-0 mt-1"
+                  >
+                    <i class="ri-heart-pulse-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-1">
+                      Holistic Integration
+                    </h4>
+                    <p class="text-gray-600">
+                      We integrate mindfulness, lifestyle factors, and
+                      supportive practices to address all aspects of wellbeing,
+                      not just symptom reduction.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="bg-white p-8 rounded-lg shadow-sm border border-gray-100"
+            >
+              <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+                Evidence-Based Therapies
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Our therapists are trained in multiple therapeutic modalities,
+                allowing us to draw from the most effective approaches for each
+                client's unique needs.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-4 rounded">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mb-3"
+                  >
+                    <i class="ri-psychology-line text-primary"></i>
+                  </div>
+                  <h4 class="text-lg font-medium text-gray-900 mb-1">
+                    Cognitive Behavioral Therapy (CBT)
+                  </h4>
+                  <p class="text-sm text-gray-600">
+                    Addresses thought patterns that affect emotions and
+                    behaviors
+                  </p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mb-3"
+                  >
+                    <i class="ri-emotion-line text-primary"></i>
+                  </div>
+                  <h4 class="text-lg font-medium text-gray-900 mb-1">
+                    Dialectical Behavior Therapy (DBT)
+                  </h4>
+                  <p class="text-sm text-gray-600">
+                    Builds skills in emotion regulation and mindfulness
+                  </p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mb-3"
+                  >
+                    <i class="ri-eye-line text-primary"></i>
+                  </div>
+                  <h4 class="text-lg font-medium text-gray-900 mb-1">
+                    EMDR Therapy
+                  </h4>
+                  <p class="text-sm text-gray-600">
+                    Processes traumatic memories to reduce their impact
+                  </p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mb-3"
+                  >
+                    <i class="ri-group-line text-primary"></i>
+                  </div>
+                  <h4 class="text-lg font-medium text-gray-900 mb-1">
+                    Interpersonal Therapy
+                  </h4>
+                  <p class="text-sm text-gray-600">
+                    Focuses on improving relationships and communication
+                  </p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mb-3"
+                  >
+                    <i class="ri-meditation-line text-primary"></i>
+                  </div>
+                  <h4 class="text-lg font-medium text-gray-900 mb-1">
+                    Mindfulness-Based Approaches
+                  </h4>
+                  <p class="text-sm text-gray-600">
+                    Cultivates present-moment awareness and acceptance
+                  </p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mb-3"
+                  >
+                    <i class="ri-parent-line text-primary"></i>
+                  </div>
+                  <h4 class="text-lg font-medium text-gray-900 mb-1">
+                    Family Systems Therapy
+                  </h4>
+                  <p class="text-sm text-gray-600">
+                    Addresses patterns and dynamics within family relationships
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900">Client Testimonials</h2>
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+            Real stories from people whose lives have been transformed through
+            their work with MindWell.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-gray-50 rounded-lg p-8 shadow-sm relative">
+            <div
+              class="absolute -top-4 left-8 text-primary text-6xl opacity-20"
+            >
+              "
+            </div>
+            <div class="relative z-10">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-400 flex">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600 italic mb-6">
+                "After struggling with anxiety for years and trying various
+                therapists, finding MindWell was truly life-changing. Dr.
+                Richards took the time to understand my specific triggers and
+                helped me develop personalized coping strategies that actually
+                work in my daily life. The combination of individual therapy and
+                their meditation classes has given me tools I use every day. For
+                the first time in my adult life, I feel like I can manage my
+                anxiety instead of it managing me."
+              </p>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-300 text-gray-700"
+                >
+                  <i class="ri-user-line"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-base font-medium text-gray-900">
+                    Jennifer Blackwell
+                  </h4>
+                  <p class="text-sm text-gray-500">
+                    Client for 2 years • Anxiety Management
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="bg-gray-50 rounded-lg p-8 shadow-sm relative">
+            <div
+              class="absolute -top-4 left-8 text-primary text-6xl opacity-20"
+            >
+              "
+            </div>
+            <div class="relative z-10">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-400 flex">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600 italic mb-6">
+                "When I lost my wife to cancer, I didn't think I would ever feel
+                normal again. The grief support group at MindWell provided a
+                safe space to process my loss with others who truly understood.
+                Dr. Mendez facilitated the group with such compassion and
+                insight. The connections I formed there have been invaluable,
+                and the strategies I learned helped me honor my grief while
+                still finding ways to move forward. I'm forever grateful for the
+                support I received during the darkest time of my life."
+              </p>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-300 text-gray-700"
+                >
+                  <i class="ri-user-line"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-base font-medium text-gray-900">
+                    David Harrington
+                  </h4>
+                  <p class="text-sm text-gray-500">
+                    Client for 1.5 years • Grief Counseling
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="bg-gray-50 rounded-lg p-8 shadow-sm relative">
+            <div
+              class="absolute -top-4 left-8 text-primary text-6xl opacity-20"
+            >
+              "
+            </div>
+            <div class="relative z-10">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-400 flex">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600 italic mb-6">
+                "As a college student struggling with depression and academic
+                pressure, I was hesitant to seek help. The telehealth option at
+                MindWell made therapy accessible for me, both financially and
+                logistically. My therapist helped me recognize harmful thought
+                patterns and develop healthier perspectives. I've learned skills
+                that have improved not just my mental health but also my
+                relationships and academic performance. The online resources
+                between sessions have been incredibly helpful too."
+              </p>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-300 text-gray-700"
+                >
+                  <i class="ri-user-line"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-base font-medium text-gray-900">
+                    Olivia Ramirez
+                  </h4>
+                  <p class="text-sm text-gray-500">
+                    Client for 10 months • Depression Treatment
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 4 -->
+          <div class="bg-gray-50 rounded-lg p-8 shadow-sm relative">
+            <div
+              class="absolute -top-4 left-8 text-primary text-6xl opacity-20"
+            >
+              "
+            </div>
+            <div class="relative z-10">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-400 flex">
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-600 italic mb-6">
+                "My husband and I were on the brink of divorce when we started
+                couples therapy at MindWell. Dr. Johnson created a safe
+                environment where we both felt heard and understood. She helped
+                us identify destructive communication patterns and taught us
+                practical skills to express our needs constructively. The tools
+                we learned have completely transformed our relationship. We're
+                now communicating better than we have in years and have
+                rediscovered the connection that brought us together."
+              </p>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-300 text-gray-700"
+                >
+                  <i class="ri-user-line"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-base font-medium text-gray-900">
+                    Michelle & Thomas Bennett
+                  </h4>
+                  <p class="text-sm text-gray-500">
+                    Clients for 1 year • Couples Counseling
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Accreditations Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900">Our Accreditations</h2>
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+            MindWell maintains the highest standards of professional excellence
+            through these accreditations and partnerships.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center"
+        >
+          <div class="flex flex-col items-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center text-primary"
+            >
+              <i class="ri-award-fill ri-2x"></i>
+            </div>
+            <p class="mt-2 text-center text-sm font-medium text-gray-700">
+              American Psychological Association
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center text-primary"
+            >
+              <i class="ri-mental-health-fill ri-2x"></i>
+            </div>
+            <p class="mt-2 text-center text-sm font-medium text-gray-700">
+              National Board for Certified Counselors
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center text-primary"
+            >
+              <i class="ri-hospital-fill ri-2x"></i>
+            </div>
+            <p class="mt-2 text-center text-sm font-medium text-gray-700">
+              Joint Commission Accredited
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center text-primary"
+            >
+              <i class="ri-health-fill ri-2x"></i>
+            </div>
+            <p class="mt-2 text-center text-sm font-medium text-gray-700">
+              American Association for Marriage and Family Therapy
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center text-primary"
+            >
+              <i class="ri-psychotherapy-fill ri-2x"></i>
+            </div>
+            <p class="mt-2 text-center text-sm font-medium text-gray-700">
+              National Alliance on Mental Illness Partner
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-16 h-16 flex items-center justify-center text-primary"
+            >
+              <i class="ri-government-fill ri-2x"></i>
+            </div>
+            <p class="mt-2 text-center text-sm font-medium text-gray-700">
+              State Department of Health Services Certified
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900">Get in Touch</h2>
+            <p class="mt-4 text-lg text-gray-600">
+              Have questions about our services or ready to start your mental
+              wellness journey? Reach out to us today.
+            </p>
+            <div class="mt-8 space-y-6">
+              <div class="flex">
+                <div
+                  class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mr-4 flex-shrink-0"
+                >
+                  <i class="ri-map-pin-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-medium text-gray-900">Main Office</h4>
+                  <p class="text-gray-600">
+                    Jain University, Global Campus, Jakkasandra Post <br />Bangalore, KA 562112
+                  </p>
+                </div>
+              </div>
+              <div class="flex">
+                <div
+                  class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mr-4 flex-shrink-0"
+                >
+                  <i class="ri-phone-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-medium text-gray-900">Phone</h4>
+                  <p class="text-gray-600">(555) 123-4567</p>
+                  <p class="text-gray-500 text-sm">
+                    Mon-Fri: 8am-8pm, Sat: 9am-5pm
+                  </p>
+                </div>
+              </div>
+              <div class="flex">
+                <div
+                  class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mr-4 flex-shrink-0"
+                >
+                  <i class="ri-mail-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-medium text-gray-900">Email</h4>
+                  <p class="text-gray-600">info@mindwell.com</p>
+                  <p class="text-gray-500 text-sm">
+                    We typically respond within 24 hours
+                  </p>
+                </div>
+              </div>
+              <div class="flex">
+                <div
+                  class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mr-4 flex-shrink-0"
+                >
+                  <i class="ri-time-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-medium text-gray-900">
+                    Hours of Operation
+                  </h4>
+                  <p class="text-gray-600">
+                    Monday - Friday: 8:00 AM - 8:00 PM<br />Saturday: 9:00 AM -
+                    5:00 PM<br />Sunday: Closed
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="bg-gray-100 rounded-lg overflow-hidden h-96">
+              <img
+                src="#"
+                alt="Office Location Map"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white">
+          Ready to start your wellness journey?
+        </h2>
+        <p class="mt-4 max-w-2xl text-xl text-white/80 mx-auto">
+          Take the first step toward better mental health today.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="#"
+            class="bg-white text-primary px-6 py-3 !rounded-button font-medium whitespace-nowrap"
+            >Schedule a Consultation</a
+          >
+          <a
+            href="dashboard.html"
+            class="bg-transparent text-white border border-white px-6 py-3 !rounded-button font-medium whitespace-nowrap"
+            >Return to Home</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <h3 class="text-xl font-bold mb-4 font-['Pacifico']">MindWell</h3>
+            <p class="text-gray-300 mb-6">
+              Providing accessible, evidence-based mental health services to
+              help you thrive.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-twitter-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="dashboard.html" class="text-gray-300 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-gray-300 hover:text-white transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="services.html" class="text-gray-300 hover:text-white transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="resources.html" class="text-gray-300 hover:text-white transition"
+                  >Resources</a
+                >
+              </li>
+              <li>
+                <a href="faq.html" class="text-gray-300 hover:text-white transition"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-gray-300 hover:text-white transition"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Services</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Individual Therapy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Group Therapy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Couples Counseling</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Mindfulness & Meditation</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Crisis Intervention</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Stress Management</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span class="text-gray-300"
+                  >Jain University, Global Campus, <br> 
+                  Jakkasandra Post, Bangalore, KA 
+                  562112
+                  </span
+                >
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 flex items-center justify-center mr-3">
+                  <i class="ri-phone-line"></i>
+                </div>
+                <span class="text-gray-300">(555) 123-4567</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 flex items-center justify-center mr-3">
+                  <i class="ri-mail-line"></i>
+                </div>
+                <span class="text-gray-300">contact@mindwell.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t border-gray-700 text-center text-gray-400 text-sm"
+        >
+          <p class="mb-4">© 2025 MindWell. All rights reserved.</p>
+          <div class="flex justify-center space-x-6">
+            <a href="#" class="hover:text-white transition">Privacy Policy</a>
+            <a href="#" class="hover:text-white transition">Terms of Service</a>
+            <a href="#" class="hover:text-white transition">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

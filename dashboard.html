@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindWell - Mental Health & Wellness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#4A90E2", secondary: "#7ED3B2" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+        font-family: 'Open Sans', sans-serif;
+        color: #333;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Merriweather', serif;
+      }
+      .hero-section {
+        background-image: url('#');
+        background-size: cover;
+        background-position: center;
+      }
+      .custom-switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+      }
+      .custom-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 34px;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+      }
+      input:checked + .slider {
+        background-color: #4A90E2;
+      }
+      input:checked + .slider:before {
+        transform: translateX(26px);
+      }
+      .custom-checkbox {
+        position: relative;
+        padding-left: 28px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .custom-checkbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #fff;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+      }
+      .custom-checkbox:hover input ~ .checkmark {
+        border-color: #b3b3b3;
+      }
+      .custom-checkbox input:checked ~ .checkmark {
+        background-color: #4A90E2;
+        border-color: #4A90E2;
+      }
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      .custom-checkbox input:checked ~ .checkmark:after {
+        display: block;
+      }
+      .custom-checkbox .checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-['Pacifico'] text-primary">MindWell</a>
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="dashboard.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >Services</a
+          >
+          <a
+            href="resources.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >Resources</a
+          >
+          <a
+            href="faq.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >FAQ</a
+          >
+          <a
+            href="contact.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a
+            href="login.html"
+            class="hidden md:block text-gray-800 font-medium hover:text-primary transition"
+            >Login</a
+          >
+          <a
+            href="signup.html"
+            class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap"
+            >Sign Up</a
+            >
+          <button
+            class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700"
+          >
+            <i class="ri-menu-line ri-lg"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="hero-section min-h-[600px] flex items-center">
+      <div class="container mx-auto px-4 w-full">
+        <div class="max-w-2xl py-16 md:py-24">
+          <h1
+            class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+          >
+            Your Journey to Mental Wellness Starts Here
+          </h1>
+          <p class="text-lg text-gray-700 mb-8">
+            Professional support, resources, and community to help you thrive
+            mentally and emotionally.
+          </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="signup.html"
+              class="bg-primary text-white px-6 py-3 !rounded-button font-medium text-base whitespace-nowrap"
+              >Get Started</a
+            >
+            <a
+              href="services.html"
+              class="bg-white text-primary px-6 py-3 !rounded-button font-medium text-base border border-primary whitespace-nowrap"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-gray-900">Our Services</h2>
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+            Comprehensive mental health support tailored to your needs.
+          </p>
+        </div>
+        <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Service 1 -->
+          <div
+            class="bg-white rounded shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="h-48 bg-gray-100 flex items-center justify-center">
+              <img
+                src="#"
+                alt="Therapy Services"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mb-4"
+              >
+                <i class="ri-mental-health-line text-primary ri-lg"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900">
+                Therapy & Counseling
+              </h3>
+              <p class="mt-2 text-gray-600">
+                One-on-one sessions with licensed therapists specializing in
+                various mental health concerns.
+              </p>
+              <a
+                href="services.html"
+                class="mt-4 inline-flex items-center text-primary font-medium"
+              >
+                Learn more
+                <div class="w-5 h-5 flex items-center justify-center ml-1">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Service 2 -->
+          <div
+            class="bg-white rounded shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="h-48 bg-gray-100 flex items-center justify-center">
+              <img
+                src="#"
+                alt="Meditation Classes"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mb-4"
+              >
+                <i class="ri-meditation-line text-primary ri-lg"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900">
+                Meditation Classes
+              </h3>
+              <p class="mt-2 text-gray-600">
+                Guided meditation sessions to help reduce stress, anxiety, and
+                improve overall mental wellbeing.
+              </p>
+              <a
+                href="#"
+                class="mt-4 inline-flex items-center text-primary font-medium"
+              >
+                Learn more
+                <div class="w-5 h-5 flex items-center justify-center ml-1">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Service 3 -->
+          <div
+            class="bg-white rounded shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="h-48 bg-gray-100 flex items-center justify-center">
+              <img
+                src="#"
+                alt="Support Groups"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 mb-4"
+              >
+                <i class="ri-group-line text-primary ri-lg"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900">
+                Support Groups
+              </h3>
+              <p class="mt-2 text-gray-600">
+                Connect with others facing similar challenges in a safe,
+                supportive environment led by professionals.
+              </p>
+              <a
+                href="#"
+                class="mt-4 inline-flex items-center text-primary font-medium"
+              >
+                Learn more
+                <div class="w-5 h-5 flex items-center justify-center ml-1">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 text-center">
+          <a
+            href="services.html"
+            class="inline-flex items-center px-6 py-3 border border-primary text-primary bg-white !rounded-button font-medium whitespace-nowrap"
+          >
+            View All Services
+            <div class="w-5 h-5 flex items-center justify-center ml-2">
+              <i class="ri-arrow-right-line"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- How It Works -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-gray-900">How It Works</h2>
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+            Simple steps to start your mental wellness journey with us.
+          </p>
+        </div>
+        <div class="mt-16">
+          <div class="relative">
+            <div class="absolute inset-0 flex items-center" aria-hidden="true">
+              <div class="w-full border-t border-gray-300"></div>
+            </div>
+            <div class="relative flex justify-between">
+              <!-- Step 1 -->
+              <div class="text-center">
+                <div class="relative flex items-center justify-center">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white text-lg font-semibold"
+                  >
+                    1
+                  </div>
+                </div>
+                <div class="mt-6">
+                  <h3 class="text-lg font-medium text-gray-900">Sign Up</h3>
+                  <p class="mt-2 text-sm text-gray-500 max-w-xs mx-auto">
+                    Create your account and complete a brief assessment to help
+                    us understand your needs.
+                  </p>
+                </div>
+              </div>
+              <!-- Step 2 -->
+              <div class="text-center">
+                <div class="relative flex items-center justify-center">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white text-lg font-semibold"
+                  >
+                    2
+                  </div>
+                </div>
+                <div class="mt-6">
+                  <h3 class="text-lg font-medium text-gray-900">Get Matched</h3>
+                  <p class="mt-2 text-sm text-gray-500 max-w-xs mx-auto">
+                    We'll match you with the right therapist or resources based
+                    on your specific situation.
+                  </p>
+                </div>
+              </div>
+              <!-- Step 3 -->
+              <div class="text-center">
+                <div class="relative flex items-center justify-center">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white text-lg font-semibold"
+                  >
+                    3
+                  </div>
+                </div>
+                <div class="mt-6">
+                  <h3 class="text-lg font-medium text-gray-900">
+                    Book Sessions
+                  </h3>
+                  <p class="mt-2 text-sm text-gray-500 max-w-xs mx-auto">
+                    Schedule appointments that fit your calendar, either
+                    in-person or virtual.
+                  </p>
+                </div>
+              </div>
+              <!-- Step 4 -->
+              <div class="text-center">
+                <div class="relative flex items-center justify-center">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white text-lg font-semibold"
+                  >
+                    4
+                  </div>
+                </div>
+                <div class="mt-6">
+                  <h3 class="text-lg font-medium text-gray-900">
+                    Begin Healing
+                  </h3>
+                  <p class="mt-2 text-sm text-gray-500 max-w-xs mx-auto">
+                    Start your journey to better mental health with ongoing
+                    support and resources.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-16 text-center">
+          <a
+            href="signup.html"
+            class="inline-flex items-center px-6 py-3 bg-primary text-white !rounded-button font-medium whitespace-nowrap"
+          >
+            Get Started Today
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-gray-900">What Our Clients Say</h2>
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+            Real stories from people who have transformed their lives.
+          </p>
+        </div>
+        <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Testimonial 1 -->
+          <div class="bg-gray-50 rounded p-6 shadow-sm">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 flex">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-star-fill"></i>
+                </div>
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-star-fill"></i>
+                </div>
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-star-fill"></i>
+                </div>
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-star-fill"></i>
+                </div>
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "The therapy sessions have been life-changing. My therapist helped
+              me develop coping strategies for my anxiety that actually work.
+              I'm finally feeling like myself again."
+            </p>
+            <div class="mt-6 flex items-center">
+              <div
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-300 text-gray-700"
+              >
+                <i class="ri-user-line"></i>
+              </div>
+              <div class="ml-3">
+                <h4 class="text-sm font-medium text-gray-900">
+                  Rebecca Thompson
+                </h4>
+                <p class="text-sm text-gray-500">Client for 8 months</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="bg-gray-50 rounded p-6 shadow-sm">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 flex">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-star-fill"></i>
+                </div>
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-star-fill"></i>
+                </div>
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-star-fill"></i>
+                </div>
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-star-fill"></i>
+                </div>
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "The meditation classes helped me manage my stress levels during a
+              particularly difficult time at work. The techniques I learned
+              continue to help me stay centered daily."
+            </p>
+            <div class="mt-6 flex items-center">
+              <div
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-300 text-gray-700"
+              >
+                <i class="ri-user-line"></i>
+              </div>
+              <div class="ml-3">
+                <h4 class="text-sm font-medium text-gray-900">
+                  Michael Donovan
+                </h4>
+                <p class="text-sm text-gray-500">Client for 1 year</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="bg-gray-50 rounded p-6 shadow-sm">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 flex">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-star-fill"></i>
+                </div>
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-star-fill"></i>
+                </div>
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-star-fill"></i>
+                </div>
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-star-fill"></i>
+                </div>
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-star-half-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "Finding the support group was exactly what I needed. Connecting
+              with others who understand what I'm going through has been
+              incredibly validating and healing."
+            </p>
+            <div class="mt-6 flex items-center">
+              <div
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-300 text-gray-700"
+              >
+                <i class="ri-user-line"></i>
+              </div>
+              <div class="ml-3">
+                <h4 class="text-sm font-medium text-gray-900">
+                  Sarah Martinez
+                </h4>
+                <p class="text-sm text-gray-500">Client for 6 months</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Resources Preview -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-gray-900">
+            Mental Health Resources
+          </h2>
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+            Explore our collection of articles, videos, and tools to support
+            your mental wellness journey.
+          </p>
+        </div>
+        <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Resource 1 -->
+          <div
+            class="bg-white rounded shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="h-48 bg-gray-100">
+              <img
+                src="#"
+                alt="Journaling for Mental Health"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <div class="w-4 h-4 flex items-center justify-center mr-1">
+                  <i class="ri-article-line"></i>
+                </div>
+                Article • 8 min read
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900">
+                The Therapeutic Benefits of Journaling for Mental Health
+              </h3>
+              <p class="mt-2 text-gray-600">
+                Discover how daily journaling can help reduce stress, process
+                emotions, and improve overall mental wellbeing.
+              </p>
+              <a
+                href="#"
+                class="mt-4 inline-flex items-center text-primary font-medium"
+              >
+                Read more
+                <div class="w-5 h-5 flex items-center justify-center ml-1">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Resource 2 -->
+          <div
+            class="bg-white rounded shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="h-48 bg-gray-100">
+              <img
+                src="#"
+                alt="Breathing Techniques"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <div class="w-4 h-4 flex items-center justify-center mr-1">
+                  <i class="ri-video-line"></i>
+                </div>
+                Video • 12 min
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900">
+                5 Breathing Techniques to Reduce Anxiety Instantly
+              </h3>
+              <p class="mt-2 text-gray-600">
+                Learn simple yet effective breathing exercises that can help
+                calm your mind and reduce anxiety in the moment.
+              </p>
+              <a
+                href="#"
+                class="mt-4 inline-flex items-center text-primary font-medium"
+              >
+                Watch video
+                <div class="w-5 h-5 flex items-center justify-center ml-1">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Resource 3 -->
+          <div
+            class="bg-white rounded shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="h-48 bg-gray-100">
+              <img
+                src="#"
+                alt="Holistic Mental Health"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <div class="w-4 h-4 flex items-center justify-center mr-1">
+                  <i class="ri-article-line"></i>
+                </div>
+                Guide • 15 min read
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900">
+                The Four Pillars of Holistic Mental Health
+              </h3>
+              <p class="mt-2 text-gray-600">
+                Explore how nutrition, exercise, sleep, and social connection
+                work together to support optimal mental health.
+              </p>
+              <a
+                href="#"
+                class="mt-4 inline-flex items-center text-primary font-medium"
+              >
+                Read more
+                <div class="w-5 h-5 flex items-center justify-center ml-1">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 text-center">
+          <a
+            href="resources.html"
+            class="inline-flex items-center px-6 py-3 border border-primary text-primary bg-white !rounded-button font-medium whitespace-nowrap"
+          >
+            View All Resources
+            <div class="w-5 h-5 flex items-center justify-center ml-2">
+              <i class="ri-arrow-right-line"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary">10,000+</div>
+            <p class="mt-2 text-gray-600">Clients Helped</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary">98%</div>
+            <p class="mt-2 text-gray-600">Client Satisfaction</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary">50+</div>
+            <p class="mt-2 text-gray-600">Licensed Therapists</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-primary">24/7</div>
+            <p class="mt-2 text-gray-600">Support Available</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white">
+          Ready to start your journey?
+        </h2>
+        <p class="mt-4 max-w-2xl text-xl text-white/80 mx-auto">
+          Take the first step toward better mental health today.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="signup.html"
+            class="bg-white text-primary px-6 py-3 !rounded-button font-medium whitespace-nowrap"
+            >Sign Up Now</a
+          >
+          <a
+            href="contact.html"
+            class="bg-transparent text-white border border-white px-6 py-3 !rounded-button font-medium whitespace-nowrap"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-gray-900">Stay Updated</h2>
+          <p class="mt-4 text-gray-600">
+            Subscribe to our newsletter for the latest mental health tips,
+            resources, and updates.
+          </p>
+          <form class="mt-6">
+            <div class="flex flex-col sm:flex-row gap-3">
+              <div class="flex-grow">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary/20 text-gray-900"
+                />
+              </div>
+              <button
+                type="submit"
+                class="bg-primary text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </div>
+            <div class="mt-3 text-left">
+              <label class="custom-checkbox flex items-start">
+                <input type="checkbox" class="mr-2" />
+                <span class="checkmark mr-2 mt-0.5"></span>
+                <span class="text-sm text-gray-600"
+                  >I agree to receive emails about mental health resources and
+                  services. You can unsubscribe at any time.</span
+                >
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+   <!-- Footer Section -->
+   <footer class="bg-gray-800 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div>
+          <h3 class="text-xl font-bold mb-4 font-['Pacifico']">MindWell</h3>
+          <p class="text-gray-300 mb-6">
+            Providing accessible, evidence-based mental health services to
+            help you thrive.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+            >
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+            >
+              <i class="ri-twitter-fill"></i>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+            >
+              <i class="ri-instagram-fill"></i>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+            >
+              <i class="ri-linkedin-fill"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="dashboard.html" class="text-gray-300 hover:text-white transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-300 hover:text-white transition"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="services.html" class="text-gray-300 hover:text-white transition"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="resources.html" class="text-gray-300 hover:text-white transition"
+                >Resources</a
+              >
+            </li>
+            <li>
+              <a href="faq.html" class="text-gray-300 hover:text-white transition"
+                >FAQ</a
+              >
+            </li>
+            <li>
+              <a href="contact.html" class="text-gray-300 hover:text-white transition"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Services</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition"
+                >Individual Therapy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition"
+                >Group Therapy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition"
+                >Couples Counseling</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition"
+                >Mindfulness & Meditation</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition"
+                >Crisis Intervention</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition"
+                >Stress Management</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                <i class="ri-map-pin-line"></i>
+              </div>
+              <span class="text-gray-300"
+                  >Jain University, Global Campus, <br> 
+                  Jakkasandra Post, Bangalore, KA 
+                  562112
+                  </span
+                >
+            </li>
+            <li class="flex items-center">
+              <div class="w-5 h-5 flex items-center justify-center mr-3">
+                <i class="ri-phone-line"></i>
+              </div>
+              <span class="text-gray-300">(555) 123-4567</span>
+            </li>
+            <li class="flex items-center">
+              <div class="w-5 h-5 flex items-center justify-center mr-3">
+                <i class="ri-mail-line"></i>
+              </div>
+              <span class="text-gray-300">contact@mindwell.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="pt-8 border-t border-gray-700 text-center text-gray-400 text-sm"
+      >
+        <p class="mb-4">© 2025 MindWell. All rights reserved.</p>
+        <div class="flex justify-center space-x-6">
+          <a href="#" class="hover:text-white transition">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition">Terms of Service</a>
+          <a href="#" class="hover:text-white transition">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Custom checkbox functionality
+        const checkboxes = document.querySelectorAll(
+          '.custom-checkbox input[type="checkbox"]',
+        );
+        checkboxes.forEach((checkbox) => {
+          checkbox.addEventListener("change", function () {
+            // Additional functionality can be added here if needed
+          });
+        });
+      });
+    </script>
+    <!-- AI Chatbot Popup -->
+    <div id="chatbot-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+      <button id="chatbot-toggle" aria-label="Toggle Chatbot" class="bg-primary text-white p-4 rounded-full shadow-lg hover:bg-primary/90 transition">
+        <i class="ri-chat-3-line ri-lg"></i>
+      </button>
+      <div id="chatbot-popup" class="hidden mt-4 w-80 bg-white rounded-lg shadow-lg flex flex-col overflow-hidden">
+        <div class="bg-primary text-white px-4 py-2 font-semibold flex justify-between items-center">
+          <span>AI Chatbot</span>
+          <div class="flex space-x-2">
+            <button id="chatbot-new" aria-label="New Conversation" class="text-white hover:text-gray-200 px-2 py-1 border border-white rounded text-sm">
+              New Conversation
+            </button>
+            <button id="chatbot-close" aria-label="Close Chatbot" class="text-white hover:text-gray-200">
+              <i class="ri-close-line ri-lg"></i>
+            </button>
+          </div>
+        </div>
+        <div id="chatbot-messages" class="p-4 h-64 overflow-y-auto text-gray-800 flex flex-col space-y-2">
+          <!-- Messages will appear here -->
+        </div>
+        <form id="chatbot-form" class="flex border-t border-gray-200">
+          <input id="chatbot-input" type="text" placeholder="Type your message..." class="flex-grow px-4 py-2 focus:outline-none" autocomplete="off" />
+          <button type="submit" class="bg-primary text-white px-4 py-2 hover:bg-primary/90 transition">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Custom checkbox functionality
+        const checkboxes = document.querySelectorAll(
+          '.custom-checkbox input[type="checkbox"]',
+        );
+        checkboxes.forEach((checkbox) => {
+          checkbox.addEventListener("change", function () {
+            // Additional functionality can be added here if needed
+          });
+        });
+
+        // Chatbot toggle and functionality
+        const chatbotToggle = document.getElementById("chatbot-toggle");
+        const chatbotPopup = document.getElementById("chatbot-popup");
+        const chatbotClose = document.getElementById("chatbot-close");
+        const chatbotNew = document.getElementById("chatbot-new");
+        const chatbotForm = document.getElementById("chatbot-form");
+        const chatbotInput = document.getElementById("chatbot-input");
+        const chatbotMessages = document.getElementById("chatbot-messages");
+
+        function appendMessage(message, sender) {
+          const messageElem = document.createElement("div");
+          messageElem.className = sender === "user" ? "self-end bg-primary text-white px-3 py-2 rounded-lg max-w-xs" : "self-start bg-gray-200 text-gray-900 px-3 py-2 rounded-lg max-w-xs";
+          messageElem.textContent = message;
+          chatbotMessages.appendChild(messageElem);
+          chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        chatbotToggle.addEventListener("click", () => {
+          chatbotPopup.classList.toggle("hidden");
+          if (!chatbotPopup.classList.contains("hidden")) {
+            if (chatbotMessages.children.length === 0) {
+              appendMessage("Hi, How can I assist you?", "bot");
+            }
+            chatbotInput.focus();
+          }
+        });
+
+        chatbotClose.addEventListener("click", () => {
+          chatbotPopup.classList.add("hidden");
+        });
+
+        chatbotNew.addEventListener("click", () => {
+          chatbotMessages.innerHTML = "";
+          chatbotInput.value = "";
+          chatbotInput.focus();
+        });
+
+        chatbotForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const userMessage = chatbotInput.value.trim();
+          if (userMessage === "") return;
+          appendMessage(userMessage, "user");
+          chatbotInput.value = "";
+
+          // Simple canned response for demonstration
+          setTimeout(() => {
+            const botResponse = "Thank you for your message. How can I assist you further?";
+            appendMessage(botResponse, "bot");
+          }, 1000);
+        });
+      });
+    </script>
+  </body>
+</html>

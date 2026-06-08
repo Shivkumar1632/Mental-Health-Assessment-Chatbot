@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - MindWell</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#4A90E2", secondary: "#7ED3B2" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+        font-family: 'Open Sans', sans-serif;
+        color: #333;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Merriweather', serif;
+      }
+      .map-container {
+        background-image: url('#{mapImageUrl}');
+        background-size: cover;
+        background-position: center;
+      }
+      .custom-checkbox {
+        position: relative;
+        padding-left: 28px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .custom-checkbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #fff;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+      }
+      .custom-checkbox:hover input ~ .checkmark {
+        border-color: #b3b3b3;
+      }
+      .custom-checkbox input:checked ~ .checkmark {
+        background-color: #4A90E2;
+        border-color: #4A90E2;
+      }
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      .custom-checkbox input:checked ~ .checkmark:after {
+        display: block;
+      }
+      .custom-checkbox .checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-['Pacifico'] text-primary">MindWell</a>
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="dashboard.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >Services</a
+          >
+          <a
+            href="resources.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >Resources</a
+          >
+          <a
+            href="faq.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >FAQ</a
+          >
+          <a href="contact.html" 
+          class="text-primary font-medium transition"
+          >Contact</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a
+            href="login.html"
+            class="hidden md:block text-gray-800 font-medium hover:text-primary transition"
+            >Login</a
+          >
+          <a
+          href="signup.html"
+          class="bg-primary text-white px-4 py-2 text-sm font-medium !rounded-button whitespace-nowrap"
+          >Sign up</a
+          >
+          <button
+            class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700"
+            id="mobile-menu-button"
+          >
+            <i class="ri-menu-line ri-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        class="hidden md:hidden bg-white shadow-md absolute w-full"
+        id="mobile-menu"
+      >
+        <div class="px-4 py-3 space-y-3">
+          <a
+            href="dashboard.html"
+            class="block text-gray-800 font-medium hover:text-primary transition"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="block text-gray-800 font-medium hover:text-primary transition"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="block text-gray-800 font-medium hover:text-primary transition"
+            >Services</a
+          >
+          <a
+            href="rtesources.html"
+            class="block text-gray-800 font-medium hover:text-primary transition"
+            >Resources</a
+          >
+          <a
+            href="faq.html"
+            class="block text-gray-800 font-medium hover:text-primary transition"
+            >FAQ</a
+          >
+          <a href="contact.html" class="block text-primary font-medium transition"
+            >Contact</a
+          >
+          <a
+            href="login.html"
+            class="block text-gray-800 font-medium hover:text-primary transition"
+            >Login</a
+          >
+          <a
+          href="signup.html"
+          class="bg-primary text-white px-4 py-2 text-sm font-medium !rounded-button whitespace-nowrap"
+          >Sign up</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-16">
+      <!-- Page Header -->
+      <section class="bg-primary bg-opacity-10 py-12">
+        <div class="container mx-auto px-4">
+          <div class="max-w-3xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Contact Us
+            </h1>
+            <p class="text-lg text-gray-700">
+              We're here to help you on your mental wellness journey. Reach out
+              to us with any questions or to schedule an appointment.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Information and Form Section -->
+      <section class="py-16">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div class="bg-white rounded shadow-md p-8">
+              <h2 class="text-2xl font-bold text-gray-900 mb-6">
+                Send Us a Message
+              </h2>
+              <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-sm font-medium text-gray-700 mb-2"
+                      >Full Name *</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-gray-700 mb-2"
+                      >Email Address *</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    />
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label
+                      for="phone"
+                      class="block text-sm font-medium text-gray-700 mb-2"
+                      >Phone Number</label
+                    >
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="subject"
+                      class="block text-sm font-medium text-gray-700 mb-2"
+                      >Subject *</label
+                    >
+                    <div class="relative">
+                      <select
+                        id="subject"
+                        name="subject"
+                        required
+                        class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent appearance-none pr-8"
+                      >
+                        <option value="" disabled selected>
+                          Select a subject
+                        </option>
+                        <option value="appointment">
+                          Schedule an Appointment
+                        </option>
+                        <option value="services">
+                          Question about Services
+                        </option>
+                        <option value="billing">Billing Inquiry</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                      </select>
+                      <div
+                        class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none w-5 h-5 flex items-center justify-center"
+                      >
+                        <i class="ri-arrow-down-s-line"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Your Message *</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  ></textarea>
+                </div>
+                <div class="mb-6">
+                  <label class="custom-checkbox text-sm text-gray-600">
+                    <input type="checkbox" required />
+                    <span class="checkmark"></span>
+                    I consent to MindWell collecting and storing the information
+                    I've provided
+                  </label>
+                </div>
+                <button
+                  type="submit"
+                  class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div>
+              <div class="bg-white rounded shadow-md p-8 mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">
+                  Contact Information
+                </h2>
+                <div class="space-y-6">
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1"
+                    >
+                      <i class="ri-map-pin-line ri-lg text-primary"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-gray-900 mb-1">
+                        Office Address
+                      </h3>
+                      <p class="text-gray-600">
+                        Jain University, Global Campus, <br> 
+                        Jakkasandra Post, Bangalore, KA 
+                        562112
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1"
+                    >
+                      <i class="ri-phone-line ri-lg text-primary"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-gray-900 mb-1">
+                        Phone Numbers
+                      </h3>
+                      <p class="text-gray-600">
+                        Main: (555) 123-4567<br />Crisis Hotline: (555) 987-6543
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1"
+                    >
+                      <i class="ri-mail-line ri-lg text-primary"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-gray-900 mb-1">
+                        Email Address
+                      </h3>
+                      <p class="text-gray-600">
+                        contact@mindwell.com<br />support@mindwell.com
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1"
+                    >
+                      <i class="ri-time-line ri-lg text-primary"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold text-gray-900 mb-1">
+                        Office Hours
+                      </h3>
+                      <div class="grid grid-cols-2 gap-x-4 text-gray-600">
+                        <p>Monday - Friday:</p>
+                        <p>8:00 AM - 7:00 PM</p>
+                        <p>Saturday:</p>
+                        <p>9:00 AM - 3:00 PM</p>
+                        <p>Sunday:</p>
+                        <p>Closed</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Map -->
+              <div class="bg-white rounded shadow-md overflow-hidden">
+                <div class="map-container h-64 w-full"></div>
+                <div class="p-4 bg-primary bg-opacity-10">
+                  <div class="flex items-center">
+                    <div
+                      class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-20 rounded-full mr-3"
+                    >
+                      <i class="ri-information-line ri-lg text-primary"></i>
+                    </div>
+                    <p class="text-sm text-gray-700">
+                      Our office is located in Jakkasandra Post, Bangalore, with easy
+                      access to public transportation and parking facilities
+                      nearby.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Alternative Contact Methods -->
+      <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="max-w-3xl mx-auto text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Alternative Ways to Connect
+            </h2>
+            <p class="text-gray-600">
+              Choose the method that works best for you to reach our team.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 rounded shadow-md p-6 text-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4"
+              >
+                <i class="ri-chat-3-line ri-xl text-primary"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Live Chat</h3>
+              <p class="text-gray-600 mb-4">
+                Connect with our support team instantly through our secure live
+                chat service.
+              </p>
+              <div
+                class="inline-flex items-center text-sm font-medium text-primary"
+              >
+                <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                Available Now
+              </div>
+              <button
+                class="mt-4 bg-white text-primary border border-primary px-6 py-2 !rounded-button font-medium hover:bg-gray-50 transition whitespace-nowrap w-full"
+              >
+                Start Chat
+              </button>
+            </div>
+            <div class="bg-gray-50 rounded shadow-md p-6 text-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4"
+              >
+                <i class="ri-video-chat-line ri-xl text-primary"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                Video Consultation
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Schedule a secure video call with one of our mental health
+                professionals.
+              </p>
+              <button
+                class="mt-4 bg-white text-primary border border-primary px-6 py-2 !rounded-button font-medium hover:bg-gray-50 transition whitespace-nowrap w-full"
+              >
+                Book Consultation
+              </button>
+            </div>
+            <div class="bg-gray-50 rounded shadow-md p-6 text-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4"
+              >
+                <i class="ri-customer-service-2-line ri-xl text-primary"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                Callback Request
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Leave your number and we'll call you back at a time that works
+                for you.
+              </p>
+              <button
+                class="mt-4 bg-white text-primary border border-primary px-6 py-2 !rounded-button font-medium hover:bg-gray-50 transition whitespace-nowrap w-full"
+              >
+                Request Callback
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Response Times & Emergency Info -->
+      <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Response Times -->
+            <div class="bg-white rounded shadow-md p-8">
+              <h2 class="text-2xl font-bold text-gray-900 mb-6">
+                Response Times
+              </h2>
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1"
+                  >
+                    <i class="ri-mail-line ri-lg text-primary"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-gray-900 mb-1">
+                      Email Inquiries
+                    </h3>
+                    <p class="text-gray-600">
+                      We typically respond to email inquiries within 24 business
+                      hours.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1"
+                  >
+                    <i class="ri-chat-3-line ri-lg text-primary"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-gray-900 mb-1">Live Chat</h3>
+                    <p class="text-gray-600">
+                      Our live chat is available during office hours with
+                      immediate response.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1"
+                  >
+                    <i class="ri-phone-line ri-lg text-primary"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-gray-900 mb-1">
+                      Phone Calls
+                    </h3>
+                    <p class="text-gray-600">
+                      Phone calls are answered during office hours. Voicemails
+                      are returned within 1 business day.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1"
+                  >
+                    <i class="ri-form-line ri-lg text-primary"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-gray-900 mb-1">
+                      Contact Form
+                    </h3>
+                    <p class="text-gray-600">
+                      Messages sent through our contact form are processed
+                      within 24-48 business hours.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Emergency Information -->
+            <div class="bg-white rounded shadow-md p-8">
+              <div class="flex items-center mb-6">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-red-100 rounded-full mr-4"
+                >
+                  <i class="ri-alert-line ri-lg text-red-600"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900">
+                  Emergency Resources
+                </h2>
+              </div>
+
+              <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <i class="ri-emergency-alert-line ri-lg text-red-600"></i>
+                  </div>
+                  <div class="ml-3">
+                    <h3 class="text-sm font-medium text-red-800">
+                      If you're experiencing a mental health emergency, please
+                      call 108 or go to your nearest emergency room.
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">
+                    24/7 Crisis Resources
+                  </h3>
+                  <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-start">
+                      <i class="ri-phone-fill ri-lg text-primary mr-2 mt-1"></i>
+                      <span
+                        >National Suicide Prevention Lifeline: <br /><strong
+                          >1-800-273-8255</strong
+                        ></span
+                      >
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        class="ri-message-2-fill ri-lg text-primary mr-2 mt-1"
+                      ></i>
+                      <span
+                        >Crisis Text Line: Text <strong>HOME</strong> to
+                        <strong>741741</strong></span
+                      >
+                    </li>
+                    <li class="flex items-start">
+                      <i class="ri-phone-fill ri-lg text-primary mr-2 mt-1"></i>
+                      <span
+                        >MindWell Crisis Hotline: <br /><strong
+                          >(555) 987-6543</strong
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">
+                    After-Hours Support
+                  </h3>
+                  <p class="text-gray-600">
+                    For urgent but non-emergency situations outside of our
+                    regular office hours, please call our after-hours support
+                    line at <strong>(555) 456-7890</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Media & Connect -->
+      <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Connect With Us
+            </h2>
+            <p class="text-gray-600 mb-8">
+              Follow us on social media for mental wellness tips, resources, and
+              updates.
+            </p>
+            <div class="flex justify-center space-x-6">
+              <a
+                href="#"
+                class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full hover:bg-primary hover:text-white transition"
+              >
+                <i class="ri-facebook-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full hover:bg-primary hover:text-white transition"
+              >
+                <i class="ri-twitter-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full hover:bg-primary hover:text-white transition"
+              >
+                <i class="ri-instagram-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full hover:bg-primary hover:text-white transition"
+              >
+                <i class="ri-linkedin-fill ri-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full hover:bg-primary hover:text-white transition"
+              >
+                <i class="ri-youtube-fill ri-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                Frequently Asked Contact Questions
+              </h2>
+              <p class="text-gray-600">
+                Find quick answers to common questions about contacting us.
+              </p>
+            </div>
+            <div class="space-y-4">
+              <div class="bg-white rounded shadow-sm">
+                <button
+                  class="flex justify-between items-center w-full text-left font-medium text-gray-900 p-4"
+                  id="faq1"
+                >
+                  <span
+                    >How quickly will I receive a response to my inquiry?</span
+                  >
+                  <i class="ri-arrow-down-s-line ri-lg"></i>
+                </button>
+                <div
+                  class="p-4 border-t border-gray-100 hidden"
+                  id="faq1-answer"
+                >
+                  <p class="text-gray-600">
+                    We strive to respond to all inquiries within 24 business
+                    hours. For urgent matters, we recommend calling our office
+                    directly or using the live chat feature during business
+                    hours for immediate assistance.
+                  </p>
+                </div>
+              </div>
+              <div class="bg-white rounded shadow-sm">
+                <button
+                  class="flex justify-between items-center w-full text-left font-medium text-gray-900 p-4"
+                  id="faq2"
+                >
+                  <span
+                    >Can I schedule an appointment through the contact
+                    form?</span
+                  >
+                  <i class="ri-arrow-down-s-line ri-lg"></i>
+                </button>
+                <div
+                  class="p-4 border-t border-gray-100 hidden"
+                  id="faq2-answer"
+                >
+                  <p class="text-gray-600">
+                    Yes, you can request an appointment through our contact form
+                    by selecting "Schedule an Appointment" from the subject
+                    dropdown. However, for faster scheduling, we recommend using
+                    our online booking system or calling our office directly.
+                  </p>
+                </div>
+              </div>
+              <div class="bg-white rounded shadow-sm">
+                <button
+                  class="flex justify-between items-center w-full text-left font-medium text-gray-900 p-4"
+                  id="faq3"
+                >
+                  <span>How do I contact my specific therapist directly?</span>
+                  <i class="ri-arrow-down-s-line ri-lg"></i>
+                </button>
+                <div
+                  class="p-4 border-t border-gray-100 hidden"
+                  id="faq3-answer"
+                >
+                  <p class="text-gray-600">
+                    Once you're an established client, you'll have access to our
+                    secure client portal where you can message your therapist
+                    directly. For confidentiality and privacy reasons, we don't
+                    provide direct contact information for our therapists
+                    through our public channels.
+                  </p>
+                </div>
+              </div>
+              <div class="bg-white rounded shadow-sm">
+                <button
+                  class="flex justify-between items-center w-full text-left font-medium text-gray-900 p-4"
+                  id="faq4"
+                >
+                  <span
+                    >What should I do if I'm experiencing a mental health
+                    crisis?</span
+                  >
+                  <i class="ri-arrow-down-s-line ri-lg"></i>
+                </button>
+                <div
+                  class="p-4 border-t border-gray-100 hidden"
+                  id="faq4-answer"
+                >
+                  <p class="text-gray-600">
+                    If you're experiencing a mental health emergency or crisis,
+                    please call 108, go to your nearest emergency room, or
+                    contact the National Suicide Prevention Lifeline at
+                    1-800-273-8255. Our crisis hotline is also available 24/7 at
+                    (555) 987-6543 for urgent mental health support.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <h3 class="text-xl font-bold mb-4 font-['Pacifico']">MindWell</h3>
+            <p class="text-gray-300 mb-6">
+              Providing accessible, evidence-based mental health services to
+              help you thrive.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-twitter-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="dashboard.html" class="text-gray-300 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-gray-300 hover:text-white transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="services.html" class="text-gray-300 hover:text-white transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="resources.html" class="text-gray-300 hover:text-white transition"
+                  >Resources</a
+                >
+              </li>
+              <li>
+                <a href="faq.html" class="text-gray-300 hover:text-white transition"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-gray-300 hover:text-white transition"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Services</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Individual Therapy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Group Therapy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Couples Counseling</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Mindfulness & Meditation</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Crisis Intervention</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Stress Management</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span class="text-gray-300"
+                  >Jain University, Global Campus, <br> 
+                  Jakkasandra Post, Bangalore, KA 
+                  562112
+                  </span
+                >
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 flex items-center justify-center mr-3">
+                  <i class="ri-phone-line"></i>
+                </div>
+                <span class="text-gray-300">(555) 123-4567</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 flex items-center justify-center mr-3">
+                  <i class="ri-mail-line"></i>
+                </div>
+                <span class="text-gray-300">contact@mindwell.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t border-gray-700 text-center text-gray-400 text-sm"
+        >
+          <p class="mb-4">© 2025 MindWell. All rights reserved.</p>
+          <div class="flex justify-center space-x-6">
+            <a href="#" class="hover:text-white transition">Privacy Policy</a>
+            <a href="#" class="hover:text-white transition">Terms of Service</a>
+            <a href="#" class="hover:text-white transition">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mobile menu toggle
+        const menuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuButton.addEventListener("click", function () {
+          if (mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.remove("hidden");
+            this.innerHTML = '<i class="ri-close-line ri-lg"></i>';
+          } else {
+            mobileMenu.classList.add("hidden");
+            this.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
+          }
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // FAQ Accordion
+        const faqButtons = document.querySelectorAll('[id^="faq"]');
+        faqButtons.forEach((button) => {
+          if (!button.id.includes("-answer")) {
+            button.addEventListener("click", function () {
+              const answerId = this.id + "-answer";
+              const answer = document.getElementById(answerId);
+              const icon = this.querySelector("i");
+
+              if (answer.classList.contains("hidden")) {
+                answer.classList.remove("hidden");
+                icon.classList.remove("ri-arrow-down-s-line");
+                icon.classList.add("ri-arrow-up-s-line");
+              } else {
+                answer.classList.add("hidden");
+                icon.classList.remove("ri-arrow-up-s-line");
+                icon.classList.add("ri-arrow-down-s-line");
+              }
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

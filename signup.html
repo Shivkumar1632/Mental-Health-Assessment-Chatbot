@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - MindWell Mental Health Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#4A90E2", secondary: "#7ED3B2" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: #333;
+        background-color: #f8fafc;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Merriweather", serif;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+      }
+      .custom-checkbox {
+        position: relative;
+        padding-left: 28px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .custom-checkbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #fff;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+      }
+      .custom-checkbox:hover input ~ .checkmark {
+        border-color: #b3b3b3;
+      }
+      .custom-checkbox input:checked ~ .checkmark {
+        background-color: #4a90e2;
+        border-color: #4a90e2;
+      }
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      .custom-checkbox input:checked ~ .checkmark:after {
+        display: block;
+      }
+      .custom-checkbox .checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+      .login-bg {
+        background-image: url("#");
+        background-size: cover;
+        background-position: center;
+      }
+      .password-toggle:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen flex flex-col">
+      <header class="bg-white shadow-sm w-full">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+          <a href="dashboard.html" class="text-2xl font-['Pacifico'] text-primary"
+            >MindWell</a
+          >
+          <a
+            href="login.html"
+            class="text-gray-700 hover:text-primary transition flex items-center"
+          >
+            <i class="ri-arrow-left-line mr-1"></i> Back to Login
+          </a>
+        </div>
+      </header>
+
+      <main class="flex-grow flex items-center justify-center py-12 px-4">
+        <div
+          class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 shadow-lg rounded-lg overflow-hidden"
+        >
+          <!-- Left side - Signup Form -->
+          <div class="bg-white p-8 md:p-12">
+            <div class="max-w-md mx-auto">
+              <h1 class="text-3xl font-bold text-gray-900 mb-2 text-center">
+                Create Your Account
+              </h1>
+              <p class="text-gray-600 text-sm text-center mb-6">
+                Please fill in the details to sign up.
+              </p>
+
+              <form>
+                <div class="mb-6">
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Full Name</label
+                  >
+                  <div class="relative">
+                    <div
+                      class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                    >
+                      <i class="ri-user-line text-gray-400"></i>
+                    </div>
+                    <input
+                      type="text"
+                      id="name"
+                      class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-6">
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Email Address</label
+                  >
+                  <div class="relative">
+                    <div
+                      class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                    >
+                      <i class="ri-mail-line text-gray-400"></i>
+                    </div>
+                    <input
+                      type="email"
+                      id="email"
+                      class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-6">
+                  <label
+                    for="password"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Password</label
+                  >
+                  <div class="relative">
+                    <div
+                      class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                    >
+                      <i class="ri-lock-line text-gray-400"></i>
+                    </div>
+                    <input
+                      type="password"
+                      id="password"
+                      class="w-full pl-10 pr-10 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                      placeholder="Create a password"
+                      required
+                    />
+                    <button
+                      type="button"
+                      class="absolute inset-y-0 right-0 pr-3 flex items-center password-toggle"
+                    >
+                      <i class="ri-eye-off-line text-gray-400"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="mb-6">
+                  <label
+                    for="confirm-password"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Confirm Password</label
+                  >
+                  <div class="relative">
+                    <div
+                      class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                    >
+                      <i class="ri-lock-line text-gray-400"></i>
+                    </div>
+                    <input
+                      type="password"
+                      id="confirm-password"
+                      class="w-full pl-10 pr-10 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                      placeholder="Confirm your password"
+                      required
+                    />
+                    <button
+                      type="button"
+                      class="absolute inset-y-0 right-0 pr-3 flex items-center password-toggle"
+                    >
+                      <i class="ri-eye-off-line text-gray-400"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="mb-6">
+                  <label class="custom-checkbox text-sm text-gray-600">
+                    <input type="checkbox" id="terms" required />
+                    <span class="checkmark"></span>
+                    I agree to the <a href="#" class="text-primary hover:underline">Terms and Conditions</a>
+                  </label>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-primary text-white py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap mb-6"
+                >
+                  Sign Up
+                </button>
+              </form>
+
+              <div class="relative flex items-center justify-center mb-6">
+                <div class="flex-grow border-t border-gray-200"></div>
+                <span class="flex-shrink mx-4 text-gray-500 text-sm"
+                  >Or continue with</span
+                >
+                <div class="flex-grow border-t border-gray-200"></div>
+              </div>
+
+              <div class="grid grid-cols-3 gap-3 mb-8">
+                <button
+                  class="flex items-center justify-center py-2 px-4 border border-gray-300 rounded bg-white hover:bg-gray-50 transition"
+                >
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-google-fill text-[#4285F4]"></i>
+                  </div>
+                </button>
+                <button
+                  class="flex items-center justify-center py-2 px-4 border border-gray-300 rounded bg-white hover:bg-gray-50 transition"
+                >
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-facebook-fill text-[#1877F2]"></i>
+                  </div>
+                </button>
+                <button
+                  class="flex items-center justify-center py-2 px-4 border border-gray-300 rounded bg-white hover:bg-gray-50 transition"
+                >
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-apple-fill text-[#000000]"></i>
+                  </div>
+                </button>
+              </div>
+
+              <div class="text-center">
+                <p class="text-gray-600">
+                  Already have an account?
+                  <a href="login.html" class="text-primary font-medium hover:underline"
+                    >Log In</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side - Image -->
+          <div class="hidden md:block login-bg">
+            <div
+              class="h-full w-full bg-primary bg-opacity-20 flex items-center justify-center p-12"
+            >
+              <div
+                class="bg-white bg-opacity-90 p-8 rounded-lg max-w-sm text-center"
+              >
+                <div
+                  class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <i class="ri-mental-health-line ri-xl text-primary"></i>
+                </div>
+                <h2 class="text-xl font-bold text-gray-900 mb-3">
+                  Your Mental Health Journey
+                </h2>
+                <p class="text-gray-700 mb-4">
+                  Access your personalized therapy sessions, track your
+                  progress, and connect with your therapist all in one secure
+                  place.
+                </p>
+                <div class="flex justify-center space-x-2">
+                  <span class="w-2 h-2 rounded-full bg-primary"></span>
+                  <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+                  <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="bg-white py-6">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-500 text-sm mb-4 md:mb-0">
+              © 2025 MindWell. All rights reserved.
+            </p>
+            <div class="flex space-x-6">
+              <a href="#" class="text-gray-500 hover:text-gray-700 text-sm"
+                >Privacy Policy</a
+              >
+              <a href="#" class="text-gray-500 hover:text-gray-700 text-sm"
+                >Terms of Service</a
+              >
+              <a href="#" class="text-gray-500 hover:text-gray-700 text-sm"
+                >Help Center</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Password visibility toggle
+        const passwordToggles = document.querySelectorAll(".password-toggle");
+        passwordToggles.forEach((toggle) => {
+          const passwordInput = toggle.parentElement.querySelector("input");
+          const toggleIcon = toggle.querySelector("i");
+
+          toggle.addEventListener("click", function () {
+            if (passwordInput.type === "password") {
+              passwordInput.type = "text";
+              toggleIcon.classList.remove("ri-eye-off-line");
+              toggleIcon.classList.add("ri-eye-line");
+            } else {
+              passwordInput.type = "password";
+              toggleIcon.classList.remove("ri-eye-line");
+              toggleIcon.classList.add("ri-eye-off-line");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

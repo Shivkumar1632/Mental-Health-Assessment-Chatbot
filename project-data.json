@@ -1,0 +1,135 @@
+{
+  "siteTitle": "MindWell - Mental Health & Wellness",
+  "navigationLinks": [
+    { "name": "Home", "href": "dashboard.html" },
+    { "name": "About", "href": "about.html" },
+    { "name": "Services", "href": "services.html" },
+    { "name": "Resources", "href": "resources.html" },
+    { "name": "FAQ", "href": "faq.html" },
+    { "name": "Contact", "href": "contact.html" }
+  ],
+  "services": [
+    {
+      "title": "Therapy & Counseling",
+      "description": "One-on-one sessions with licensed therapists specializing in various mental health concerns.",
+      "icon": "ri-mental-health-line"
+    },
+    {
+      "title": "Meditation Classes",
+      "description": "Guided meditation sessions to help reduce stress, anxiety, and improve overall mental wellbeing.",
+      "icon": "ri-meditation-line"
+    },
+    {
+      "title": "Support Groups",
+      "description": "Connect with others facing similar challenges in a safe, supportive environment led by professionals.",
+      "icon": "ri-group-line"
+    },
+    {
+      "title": "Workshops & Webinars",
+      "description": "Interactive workshops and webinars on mental health topics led by experts.",
+      "icon": "ri-video-line"
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "stepNumber": 1,
+      "title": "Sign Up",
+      "description": "Create your account and complete a brief assessment to help us understand your needs."
+    },
+    {
+      "stepNumber": 2,
+      "title": "Get Matched",
+      "description": "We'll match you with the right therapist or resources based on your specific situation."
+    },
+    {
+      "stepNumber": 3,
+      "title": "Book Sessions",
+      "description": "Schedule appointments that fit your calendar, either in-person or virtual."
+    },
+    {
+      "stepNumber": 4,
+      "title": "Begin Healing",
+      "description": "Start your journey to better mental health with ongoing support and resources."
+    }
+  ],
+  "testimonials": [
+    {
+      "text": "The therapy sessions have been life-changing. My therapist helped me develop coping strategies for my anxiety that actually work. I'm finally feeling like myself again.",
+      "author": "Rebecca Thompson",
+      "duration": "Client for 8 months"
+    },
+    {
+      "text": "The meditation classes helped me manage my stress levels during a particularly difficult time at work. The techniques I learned continue to help me stay centered daily.",
+      "author": "Michael Donovan",
+      "duration": "Client for 1 year"
+    },
+    {
+      "text": "Finding the support group was exactly what I needed. Connecting with others who understand what I'm going through has been incredibly validating and healing.",
+      "author": "Sarah Martinez",
+      "duration": "Client for 6 months"
+    },
+    {
+      "text": "The workshops provided me with practical tools to manage my mental health daily. The experts were engaging and supportive throughout.",
+      "author": "David Lee",
+      "duration": "Client for 3 months"
+    }
+  ],
+  "resources": [
+    {
+      "title": "The Therapeutic Benefits of Journaling for Mental Health",
+      "type": "Article",
+      "description": "Discover how daily journaling can help reduce stress, process emotions, and improve overall mental wellbeing."
+    },
+    {
+      "title": "5 Breathing Techniques to Reduce Anxiety Instantly",
+      "type": "Video",
+      "description": "Learn simple yet effective breathing exercises that can help calm your mind and reduce anxiety in the moment."
+    },
+    {
+      "title": "The Four Pillars of Holistic Mental Health",
+      "type": "Guide",
+      "description": "Explore how nutrition, exercise, sleep, and social connection work together to support optimal mental health."
+    },
+    {
+      "title": "Mindfulness Practices for Everyday Life",
+      "type": "Article",
+      "description": "Simple mindfulness exercises to incorporate into your daily routine for improved focus and calm."
+    }
+  ],
+  "stats": [
+    { "label": "Clients Helped", "value": "12,000+" },
+    { "label": "Client Satisfaction", "value": "99%" },
+    { "label": "Licensed Therapists", "value": "55+" },
+    { "label": "Support Available", "value": "24/7" }
+  ],
+  "footerLinks": [
+    {
+      "section": "Quick Links",
+      "links": [
+        { "name": "Home", "href": "dashboard.html" },
+        { "name": "About Us", "href": "about.html" },
+        { "name": "Services", "href": "services.html" },
+        { "name": "Resources", "href": "resources.html" },
+        { "name": "FAQ", "href": "faq.html" },
+        { "name": "Contact", "href": "contact.html" }
+      ]
+    },
+    {
+      "section": "Services",
+      "links": [
+        { "name": "Individual Therapy", "href": "#" },
+        { "name": "Couples Counseling", "href": "#" },
+        { "name": "Group Therapy", "href": "#" },
+        { "name": "Meditation Classes", "href": "#" },
+        { "name": "Workshops", "href": "#" },
+        { "name": "Crisis Support", "href": "#" }
+      ]
+    }
+  ],
+  "contactInfo": {
+    "address": "123 Wellness Street, Suite 456, New York, NY 10001",
+    "phone": "(555) 123-4567",
+    "email": "info@mindwell.com",
+    "hours": "Mon-Fri: 8am-8pm, Sat: 9am-5pm"
+  }
+}

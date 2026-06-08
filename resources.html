@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources - MindWell Mental Health & Wellness</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#4A90E2", secondary: "#7ED3B2" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Open Sans', sans-serif;
+      color: #333;
+      }
+      .hero-section {
+      background-image: url('#');
+      background-size: cover;
+      background-position: center;
+      }
+      .custom-switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+      }
+      .custom-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      }
+      .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 34px;
+      }
+      .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+      }
+      input:checked + .slider {
+      background-color: #4A90E2;
+      }
+      input:checked + .slider:before {
+      transform: translateX(26px);
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+      outline: none;
+      border-color: #4A90E2;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+      }
+      .custom-checkbox {
+      position: relative;
+      padding-left: 28px;
+      cursor: pointer;
+      user-select: none;
+      }
+      .custom-checkbox input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      }
+      .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: #fff;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      }
+      .custom-checkbox:hover input ~ .checkmark {
+      border-color: #b3b3b3;
+      }
+      .custom-checkbox input:checked ~ .checkmark {
+      background-color: #4A90E2;
+      border-color: #4A90E2;
+      }
+      .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      }
+      .custom-checkbox input:checked ~ .checkmark:after {
+      display: block;
+      }
+      .custom-checkbox .checkmark:after {
+      left: 6px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      }
+      .custom-radio {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      }
+      .custom-radio input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      }
+      .radio-mark {
+      height: 20px;
+      width: 20px;
+      background-color: #fff;
+      border: 2px solid #b3b3b3;
+      border-radius: 50%;
+      position: relative;
+      }
+      .custom-radio input:checked ~ .radio-mark {
+      border-color: #4A90E2;
+      }
+      .radio-mark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 3px;
+      left: 3px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #4A90E2;
+      }
+      .custom-radio input:checked ~ .radio-mark:after {
+      display: block;
+      }
+      .filter-dropdown {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      }
+      .filter-dropdown.active {
+      max-height: 300px;
+      }
+      .resource-card:hover .resource-icon {
+      transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-['Pacifico'] text-primary">MindWell</a>
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="dashboard.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >Services</a
+          >
+          <a
+            href="resources.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >Resources</a
+          >
+          <a
+            href="faq.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >FAQ</a
+          >
+          <a
+            href="contact.html"
+            class="text-gray-800 font-medium hover:text-primary transition"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a
+            href="login.html"
+            class="hidden md:block text-gray-800 font-medium hover:text-primary transition"
+            >Login</a
+          >
+          <a
+            href="signup.html"
+            class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap"
+            >Sign Up</a
+            >
+          <button
+            class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700"
+          >
+            <i class="ri-menu-line ri-lg"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="hero-section min-h-[600px] flex items-center">
+      <div class="container mx-auto px-4 w-full">
+        <div class="max-w-2xl py-16 md:py-24">
+          <h1
+            class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+          >
+            Mental Health Resources
+          </h1>
+          <p class="text-lg text-gray-700 mb-8">
+            Access our comprehensive collection of tools, articles, and
+            self-help materials to support your mental wellness journey.
+          </p>
+          <div class="mt-8 flex">
+            <div class="relative flex-1 max-w-lg">
+              <div
+                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+              >
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-gray-400"
+                >
+                  <i class="ri-search-line"></i>
+                </div>
+              </div>
+              <input
+                type="text"
+                class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md text-sm placeholder-gray-400 bg-white/90 focus:border-primary"
+                placeholder="Search for resources..."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Filter Section -->
+    <section class="bg-white sticky top-16 z-40 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div
+          class="flex flex-col md:flex-row md:items-center md:space-x-6 space-y-4 md:space-y-0"
+        >
+          <div class="flex-1">
+            <h2 class="text-lg font-medium text-gray-900">Filter Resources</h2>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <div class="relative" id="resourceTypeFilter">
+              <button
+                type="button"
+                class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                Resource Type
+                <div class="w-5 h-5 flex items-center justify-center ml-2">
+                  <i class="ri-arrow-down-s-line"></i>
+                </div>
+              </button>
+              <div
+                class="filter-dropdown absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10"
+              >
+                <div class="py-1 max-h-60 overflow-auto">
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Articles</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Worksheets</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Assessment Tools</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Books & Apps</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Videos</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Community Resources</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative" id="topicFilter">
+              <button
+                type="button"
+                class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                Topic
+                <div class="w-5 h-5 flex items-center justify-center ml-2">
+                  <i class="ri-arrow-down-s-line"></i>
+                </div>
+              </button>
+              <div
+                class="filter-dropdown absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10"
+              >
+                <div class="py-1 max-h-60 overflow-auto">
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Anxiety</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Depression</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Stress Management</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Relationships</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Trauma</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Sleep</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Self-Esteem</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Mindfulness</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative" id="formatFilter">
+              <button
+                type="button"
+                class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                Format
+                <div class="w-5 h-5 flex items-center justify-center ml-2">
+                  <i class="ri-arrow-down-s-line"></i>
+                </div>
+              </button>
+              <div
+                class="filter-dropdown absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10"
+              >
+                <div class="py-1 max-h-60 overflow-auto">
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>PDF</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Video</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Interactive</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Audio</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-checkbox flex items-center">
+                      <input type="checkbox" class="filter-checkbox" />
+                      <span class="checkmark mr-3"></span>
+                      <span>Printable</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative" id="sortFilter">
+              <button
+                type="button"
+                class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                Sort By
+                <div class="w-5 h-5 flex items-center justify-center ml-2">
+                  <i class="ri-arrow-down-s-line"></i>
+                </div>
+              </button>
+              <div
+                class="filter-dropdown absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10"
+              >
+                <div class="py-1">
+                  <div class="px-4 py-2">
+                    <label class="custom-radio flex items-center">
+                      <input type="radio" name="sort" value="recent" checked />
+                      <span class="radio-mark mr-3"></span>
+                      <span>Most Recent</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-radio flex items-center">
+                      <input type="radio" name="sort" value="popular" />
+                      <span class="radio-mark mr-3"></span>
+                      <span>Most Popular</span>
+                    </label>
+                  </div>
+                  <div class="px-4 py-2">
+                    <label class="custom-radio flex items-center">
+                      <input type="radio" name="sort" value="az" />
+                      <span class="radio-mark mr-3"></span>
+                      <span>A-Z</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+              id="resetFilters"
+            >
+              Clear Filters
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Educational Articles Section -->
+    <section id="articles" class="py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-2xl font-bold text-gray-900">Educational Articles</h2>
+          <a href="#" class="text-primary font-medium flex items-center">
+            View All Articles
+            <div class="w-5 h-5 flex items-center justify-center ml-1">
+              <i class="ri-arrow-right-line"></i>
+            </div>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Article 1 -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300 resource-card"
+          >
+            <div class="h-48 bg-gray-100">
+              <img
+                src="#{imageUrl}"
+                alt="Understanding Anxiety"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <div
+                  class="bg-primary/10 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full"
+                >
+                  Anxiety
+                </div>
+                <div class="ml-2 text-xs text-gray-500">10 min read</div>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Understanding Anxiety: Causes, Symptoms, and Coping Strategies
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Learn about the different types of anxiety disorders, common
+                triggers, and evidence-based techniques to manage symptoms
+                effectively.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">By Dr. Rebecca Martin</span>
+                <a href="#" class="text-primary font-medium text-sm"
+                  >Read Article</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Article 2 -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300 resource-card"
+          >
+            <div class="h-48 bg-gray-100">
+              <img
+                src="#{imageUrl}"
+                alt="Depression Explained"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <div
+                  class="bg-primary/10 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full"
+                >
+                  Depression
+                </div>
+                <div class="ml-2 text-xs text-gray-500">12 min read</div>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Depression Explained: Beyond Feeling Sad
+              </h3>
+              <p class="text-gray-600 mb-4">
+                A comprehensive look at depression, its impact on daily
+                functioning, and the various treatment approaches that can help
+                manage symptoms.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">By Dr. Michael Chen</span>
+                <a href="#" class="text-primary font-medium text-sm"
+                  >Read Article</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Article 3 -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300 resource-card"
+          >
+            <div class="h-48 bg-gray-100">
+              <img
+                src="#{imageUrl}"
+                alt="Healthy Communication in Relationships"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <div
+                  class="bg-primary/10 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full"
+                >
+                  Relationships
+                </div>
+                <div class="ml-2 text-xs text-gray-500">8 min read</div>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                The Art of Healthy Communication in Relationships
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Discover practical techniques for improving communication with
+                your partner, resolving conflicts, and building a stronger
+                emotional connection.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500"
+                  >By Maria Rodriguez, LCSW</span
+                >
+                <a href="#" class="text-primary font-medium text-sm"
+                  >Read Article</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Downloadable Worksheets Section -->
+    <section id="worksheets" class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-2xl font-bold text-gray-900">
+            Downloadable Worksheets
+          </h2>
+          <a href="#" class="text-primary font-medium flex items-center">
+            View All Worksheets
+            <div class="w-5 h-5 flex items-center justify-center ml-1">
+              <i class="ri-arrow-right-line"></i>
+            </div>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Worksheet 1 -->
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300 resource-card"
+          >
+            <div class="p-6">
+              <div
+                class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mb-4 transition-transform duration-300 resource-icon"
+              >
+                <i class="ri-file-list-3-line text-primary ri-xl"></i>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                Anxiety Thought Record
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Track anxious thoughts, identify cognitive distortions, and
+                practice reframing negative thinking patterns.
+              </p>
+              <div class="flex items-center mb-3">
+                <div
+                  class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                >
+                  PDF
+                </div>
+                <div class="ml-2 text-xs text-gray-500">3 pages</div>
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center text-primary text-sm font-medium"
+              >
+                <div class="w-5 h-5 flex items-center justify-center mr-1">
+                  <i class="ri-download-line"></i>
+                </div>
+                Download Worksheet
+              </a>
+            </div>
+          </div>
+          <!-- Worksheet 2 -->
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300 resource-card"
+          >
+            <div class="p-6">
+              <div
+                class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mb-4 transition-transform duration-300 resource-icon"
+              >
+                <i class="ri-file-list-3-line text-primary ri-xl"></i>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                Stress Management Plan
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Create a personalized plan to identify stressors, develop coping
+                strategies, and build resilience.
+              </p>
+              <div class="flex items-center mb-3">
+                <div
+                  class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                >
+                  PDF
+                </div>
+                <div class="ml-2 text-xs text-gray-500">5 pages</div>
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center text-primary text-sm font-medium"
+              >
+                <div class="w-5 h-5 flex items-center justify-center mr-1">
+                  <i class="ri-download-line"></i>
+                </div>
+                Download Worksheet
+              </a>
+            </div>
+          </div>
+          <!-- Worksheet 3 -->
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300 resource-card"
+          >
+            <div class="p-6">
+              <div
+                class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mb-4 transition-transform duration-300 resource-icon"
+              >
+                <i class="ri-file-list-3-line text-primary ri-xl"></i>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                Mindfulness Exercises
+              </h3>
+              <p class="text-gray-600 mb-4">
+                A collection of guided mindfulness practices to help reduce
+                stress and increase present-moment awareness.
+              </p>
+              <div class="flex items-center mb-3">
+                <div
+                  class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                >
+                  PDF
+                </div>
+                <div class="ml-2 text-xs text-gray-500">7 pages</div>
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center text-primary text-sm font-medium"
+              >
+                <div class="w-5 h-5 flex items-center justify-center mr-1">
+                  <i class="ri-download-line"></i>
+                </div>
+                Download Worksheet
+              </a>
+            </div>
+          </div>
+          <!-- Worksheet 4 -->
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300 resource-card"
+          >
+            <div class="p-6">
+              <div
+                class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mb-4 transition-transform duration-300 resource-icon"
+              >
+                <i class="ri-file-list-3-line text-primary ri-xl"></i>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                Mood Tracking Journal
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Monitor daily mood patterns, identify triggers, and recognize
+                progress in your mental health journey.
+              </p>
+              <div class="flex items-center mb-3">
+                <div
+                  class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                >
+                  PDF
+                </div>
+                <div class="ml-2 text-xs text-gray-500">10 pages</div>
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center text-primary text-sm font-medium"
+              >
+                <div class="w-5 h-5 flex items-center justify-center mr-1">
+                  <i class="ri-download-line"></i>
+                </div>
+                Download Worksheet
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Self-Assessment Tools Section -->
+    <section id="assessment-tools" class="py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-2xl font-bold text-gray-900">
+            Self-Assessment Tools
+          </h2>
+          <a href="#" class="text-primary font-medium flex items-center">
+            View All Tools
+            <div class="w-5 h-5 flex items-center justify-center ml-1">
+              <i class="ri-arrow-right-line"></i>
+            </div>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Assessment Tool 1 -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mr-4"
+                >
+                  <i class="ri-mental-health-line text-primary ri-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900">
+                  Anxiety Screening Questionnaire
+                </h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                This validated screening tool helps identify symptoms of anxiety
+                and their severity. Results can guide your next steps for
+                seeking support.
+              </p>
+              <div class="flex items-center mb-4">
+                <div
+                  class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                >
+                  Interactive
+                </div>
+                <div class="ml-2 text-xs text-gray-500">5-10 minutes</div>
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center px-4 py-2 bg-primary text-white !rounded-button text-sm font-medium whitespace-nowrap"
+              >
+                Take Assessment
+              </a>
+            </div>
+          </div>
+          <!-- Assessment Tool 2 -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mr-4"
+                >
+                  <i class="ri-emotion-sad-line text-primary ri-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900">
+                  Depression Screening Tool
+                </h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                A clinically validated questionnaire to help identify symptoms
+                of depression. Your responses are confidential and can help
+                determine appropriate resources.
+              </p>
+              <div class="flex items-center mb-4">
+                <div
+                  class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                >
+                  Interactive
+                </div>
+                <div class="ml-2 text-xs text-gray-500">5-10 minutes</div>
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center px-4 py-2 bg-primary text-white !rounded-button text-sm font-medium whitespace-nowrap"
+              >
+                Take Assessment
+              </a>
+            </div>
+          </div>
+          <!-- Assessment Tool 3 -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mr-4"
+                >
+                  <i class="ri-psychotherapy-line text-primary ri-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900">
+                  Stress Level Assessment
+                </h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Evaluate your current stress levels and identify areas of your
+                life that may be contributing to excessive stress or burnout.
+              </p>
+              <div class="flex items-center mb-4">
+                <div
+                  class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                >
+                  Interactive
+                </div>
+                <div class="ml-2 text-xs text-gray-500">8-12 minutes</div>
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center px-4 py-2 bg-primary text-white !rounded-button text-sm font-medium whitespace-nowrap"
+              >
+                Take Assessment
+              </a>
+            </div>
+          </div>
+          <!-- Assessment Tool 4 -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mr-4"
+                >
+                  <i class="ri-heart-pulse-line text-primary ri-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900">
+                  Well-being Index
+                </h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                A holistic assessment of your overall mental well-being across
+                multiple dimensions, including emotional, social, and
+                psychological health.
+              </p>
+              <div class="flex items-center mb-4">
+                <div
+                  class="bg-gray-200 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                >
+                  Interactive
+                </div>
+                <div class="ml-2 text-xs text-gray-500">10-15 minutes</div>
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center px-4 py-2 bg-primary text-white !rounded-button text-sm font-medium whitespace-nowrap"
+              >
+                Take Assessment
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 bg-gray-50 p-6 rounded-lg">
+          <div class="flex items-start">
+            <div
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-100 mr-4 flex-shrink-0"
+            >
+              <i class="ri-information-line text-yellow-600"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                Important Note About Self-Assessments
+              </h3>
+              <p class="text-gray-600">
+                These self-assessment tools are for educational purposes only
+                and are not intended to replace professional diagnosis or
+                treatment. If you're experiencing significant distress or
+                concerning symptoms, please consult with a qualified mental
+                health professional.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Recommended Books Section -->
+    <section id="books-apps" class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-2xl font-bold text-gray-900">
+            Recommended Books
+          </h2>
+          <a href="#" class="text-primary font-medium flex items-center">
+            View All Recommendations
+            <div class="w-5 h-5 flex items-center justify-center ml-1">
+              <i class="ri-arrow-right-line"></i>
+            </div>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Books Section -->
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+              Books for Mental Wellness
+            </h3>
+            <div class="space-y-4">
+              <!-- Book 1 -->
+              <div class="flex bg-gray-50 p-4 rounded-lg">
+                <div
+                  class="w-20 h-28 bg-gray-200 rounded overflow-hidden flex-shrink-0"
+                >
+                  <img
+                    src="#{imageUrl}"
+                    alt="The Anxiety and Worry Workbook"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="ml-4">
+                  <h4 class="font-medium text-gray-900">
+                    The Anxiety and Worry Workbook
+                  </h4>
+                  <p class="text-sm text-gray-500 mb-1">
+                    By David Clark and Aaron Beck
+                  </p>
+                  <div class="flex items-center mb-2">
+                    <div class="flex text-yellow-400">
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-half-fill"></i>
+                    </div>
+                    <span class="text-xs text-gray-500 ml-1">4.5/5</span>
+                  </div>
+                  <p class="text-sm text-gray-600">
+                    Practical CBT techniques for managing anxiety and worry from
+                    leading experts in the field.
+                  </p>
+                </div>
+              </div>
+              <!-- Book 2 -->
+              <div class="flex bg-gray-50 p-4 rounded-lg">
+                <div
+                  class="w-20 h-28 bg-gray-200 rounded overflow-hidden flex-shrink-0"
+                >
+                  <img
+                    src="#{imageUrl}"
+                    alt="Feeling Good"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="ml-4">
+                  <h4 class="font-medium text-gray-900">
+                    Feeling Good: The New Mood Therapy
+                  </h4>
+                  <p class="text-sm text-gray-500 mb-1">By David D. Burns</p>
+                  <div class="flex items-center mb-2">
+                    <div class="flex text-yellow-400">
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                    </div>
+                    <span class="text-xs text-gray-500 ml-1">4.8/5</span>
+                  </div>
+                  <p class="text-sm text-gray-600">
+                    A classic guide to overcoming depression using cognitive
+                    therapy techniques.
+                  </p>
+                </div>
+              </div>
+              <!-- Book 3 -->
+              <div class="flex bg-gray-50 p-4 rounded-lg">
+                <div
+                  class="w-20 h-28 bg-gray-200 rounded overflow-hidden flex-shrink-0"
+                >
+                  <img
+                    src="#{imageUrl}"
+                    alt="The Mindful Way Through Depression"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="ml-4">
+                  <h4 class="font-medium text-gray-900">
+                    The Mindful Way Through Depression
+                  </h4>
+                  <p class="text-sm text-gray-500 mb-1">
+                    By Mark Williams, John Teasdale, et al.
+                  </p>
+                  <div class="flex items-center mb-2">
+                    <div class="flex text-yellow-400">
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-line"></i>
+                    </div>
+                    <span class="text-xs text-gray-500 ml-1">4.2/5</span>
+                  </div>
+                  <p class="text-sm text-gray-600">
+                    Combines mindfulness practices with cognitive therapy to
+                    prevent depression relapse.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Community Resources Section -->
+    <section id="community-resources" class="py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-2xl font-bold text-gray-900">Community Resources</h2>
+          <a href="#" class="text-primary font-medium flex items-center">
+            View All Resources
+            <div class="w-5 h-5 flex items-center justify-center ml-1">
+              <i class="ri-arrow-right-line"></i>
+            </div>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Support Groups -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="p-6">
+              <div
+                class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mb-4"
+              >
+                <i class="ri-team-line text-primary ri-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Support Groups
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Find local and virtual support groups for various mental health
+                concerns, including anxiety, depression, grief, and addiction
+                recovery.
+              </p>
+              <div class="space-y-3 mb-4">
+                <div class="flex items-center">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-2 text-primary"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-sm text-gray-700"
+                    >Facilitated by licensed professionals</span
+                  >
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-2 text-primary"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-sm text-gray-700"
+                    >In-person and virtual options</span
+                  >
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-2 text-primary"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span class="text-sm text-gray-700"
+                    >Free and low-cost options available</span
+                  >
+                </div>
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center text-primary font-medium"
+              >
+                Find Support Groups
+                <div class="w-5 h-5 flex items-center justify-center ml-1">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Crisis Resources -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="p-6">
+              <div
+                class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mb-4"
+              >
+                <i class="ri-first-aid-kit-line text-primary ri-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Crisis Resources
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Immediate help resources for mental health emergencies,
+                including hotlines, text services, and local emergency services.
+              </p>
+              <div class="space-y-3 mb-4">
+                <div class="flex items-center">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-2 text-primary"
+                  >
+                    <i class="ri-phone-line"></i>
+                  </div>
+                  <span class="text-sm text-gray-700"
+                    >988 Suicide & Crisis Lifeline</span
+                  >
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-2 text-primary"
+                  >
+                    <i class="ri-message-2-line"></i>
+                  </div>
+                  <span class="text-sm text-gray-700"
+                    >Crisis Text Line: Text HOME to 741741</span
+                  >
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-2 text-primary"
+                  >
+                    <i class="ri-map-pin-line"></i>
+                  </div>
+                  <span class="text-sm text-gray-700"
+                    >Local emergency mental health services</span
+                  >
+                </div>
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center text-primary font-medium"
+              >
+                View Crisis Resources
+                <div class="w-5 h-5 flex items-center justify-center ml-1">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Community Events -->
+          <div
+            class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="p-6">
+              <div
+                class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 mb-4"
+              >
+                <i class="ri-calendar-event-line text-primary ri-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Community Events
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Workshops, seminars, and community gatherings focused on mental
+                health awareness, education, and skill-building.
+              </p>
+              <div class="space-y-3 mb-4">
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-2 text-primary mt-0.5"
+                  >
+                    <i class="ri-calendar-line"></i>
+                  </div>
+                  <div>
+                    <span class="text-sm font-medium text-gray-700"
+                      >Apr 18 - Stress Management Workshop</span
+                    >
+                    <p class="text-xs text-gray-500">
+                      Community Center, 6:00 PM
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-2 text-primary mt-0.5"
+                  >
+                    <i class="ri-calendar-line"></i>
+                  </div>
+                  <div>
+                    <span class="text-sm font-medium text-gray-700"
+                      >Apr 25 - Mental Health Awareness Walk</span
+                    >
+                    <p class="text-xs text-gray-500">City Park, 9:00 AM</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-2 text-primary mt-0.5"
+                  >
+                    <i class="ri-calendar-line"></i>
+                  </div>
+                  <div>
+                    <span class="text-sm font-medium text-gray-700"
+                      >May 2 - Mindfulness Meditation Group</span
+                    >
+                    <p class="text-xs text-gray-500">Virtual Event, 7:00 PM</p>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="#"
+                class="inline-flex items-center text-primary font-medium"
+              >
+                View All Events
+                <div class="w-5 h-5 flex items-center justify-center ml-1">
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Blog Section -->
+    <section id="blog" class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-2xl font-bold text-gray-900">From Our Blog</h2>
+          <a href="#" class="text-primary font-medium flex items-center">
+            View All Posts
+            <div class="w-5 h-5 flex items-center justify-center ml-1">
+              <i class="ri-arrow-right-line"></i>
+            </div>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Blog Post 1 -->
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="h-48 bg-gray-100">
+              <img
+                src="#{imageUrl}"
+                alt="5 Mindfulness Practices"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span class="text-xs text-gray-500">April 10, 2025</span>
+                <span class="mx-2 text-gray-300">•</span>
+                <span class="text-xs text-gray-500">5 min read</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                5 Mindfulness Practices You Can Do in Under 5 Minutes
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Quick and effective mindfulness exercises that can be
+                incorporated into even the busiest schedules to reduce stress
+                and increase focus.
+              </p>
+              <div class="flex items-center">
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden mr-3"
+                >
+                  <img
+                    src="#{imageUrl}"
+                    alt="Emma Wilson"
+                    class="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <span class="text-sm text-gray-700">By Emma Wilson, LMFT</span>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Post 2 -->
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="h-48 bg-gray-100">
+              <img
+                src="#{imageUrl}"
+                alt="Signs of Burnout"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span class="text-xs text-gray-500">April 5, 2025</span>
+                <span class="mx-2 text-gray-300">•</span>
+                <span class="text-xs text-gray-500">7 min read</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Recognizing the Early Signs of Burnout
+              </h3>
+              <p class="text-gray-600 mb-4">
+                How to identify burnout symptoms before they become severe, and
+                strategies for protecting your mental health in high-stress
+                environments.
+              </p>
+              <div class="flex items-center">
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden mr-3"
+                >
+                  <img
+                    src="#{imageUrl}"
+                    alt="Dr. James Peterson"
+                    class="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <span class="text-sm text-gray-700">By Dr. James Peterson</span>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Post 3 -->
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300"
+          >
+            <div class="h-48 bg-gray-100">
+              <img
+                src="#{imageUrl}"
+                alt="Talking to Children About Mental Health"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span class="text-xs text-gray-500">March 28, 2025</span>
+                <span class="mx-2 text-gray-300">•</span>
+                <span class="text-xs text-gray-500">8 min read</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                How to Talk to Children About Mental Health
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Age-appropriate approaches for discussing emotions and mental
+                health with children, fostering resilience and emotional
+                intelligence.
+              </p>
+              <div class="flex items-center">
+                <div
+                  class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden mr-3"
+                >
+                  <img
+                    src="#{imageUrl}"
+                    alt="Sarah Johnson"
+                    class="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <span class="text-sm text-gray-700"
+                  >By Sarah Johnson, Ph.D</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter Section -->
+    <section class="py-12 bg-primary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="mb-6 md:mb-0 md:mr-8 md:max-w-xl">
+            <h2 class="text-2xl font-bold text-white mb-3">
+              Subscribe to Our Newsletter
+            </h2>
+            <p class="text-white/80">
+              Stay updated with the latest mental health resources, articles,
+              and tips delivered directly to your inbox. We send thoughtfully
+              curated content once a month.
+            </p>
+          </div>
+          <div class="w-full md:w-auto">
+            <form class="flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="px-4 py-3 rounded-md text-gray-700 border-none w-full sm:w-64"
+              />
+              <button
+                type="submit"
+                class="bg-white text-primary px-6 py-3 !rounded-button font-medium whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </form>
+            <p class="mt-2 text-sm text-white/70">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Emergency Resources Section -->
+    <section class="py-8 bg-red-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="flex items-center mb-4 md:mb-0">
+            <div
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-red-100 mr-4"
+            >
+              <i class="ri-alarm-warning-line text-red-600"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900">
+                Need immediate help?
+              </h3>
+              <p class="text-gray-600">
+                If you're experiencing a mental health emergency, please use
+                these resources:
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="tel:988"
+              class="inline-flex items-center px-4 py-2 bg-red-600 text-white !rounded-button text-sm font-medium whitespace-nowrap"
+            >
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-phone-line"></i>
+              </div>
+              988 Suicide & Crisis Lifeline
+            </a>
+            <a
+              href="#"
+              class="inline-flex items-center px-4 py-2 border border-red-600 text-red-600 bg-white !rounded-button text-sm font-medium whitespace-nowrap"
+            >
+              View All Emergency Resources
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <h3 class="text-xl font-bold mb-4 font-['Pacifico']">MindWell</h3>
+            <p class="text-gray-300 mb-6">
+              Providing accessible, evidence-based mental health services to
+              help you thrive.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-twitter-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="dashboard.html" class="text-gray-300 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-gray-300 hover:text-white transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="services.html" class="text-gray-300 hover:text-white transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="resources.html" class="text-gray-300 hover:text-white transition"
+                  >Resources</a
+                >
+              </li>
+              <li>
+                <a href="faq.html" class="text-gray-300 hover:text-white transition"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-gray-300 hover:text-white transition"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Services</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Individual Therapy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Group Therapy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Couples Counseling</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Mindfulness & Meditation</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Crisis Intervention</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition"
+                  >Stress Management</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span class="text-gray-300"
+                  >Jain University, Global Campus, <br> 
+                  Jakkasandra Post, Bangalore, KA 
+                  562112
+                  </span
+                >
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 flex items-center justify-center mr-3">
+                  <i class="ri-phone-line"></i>
+                </div>
+                <span class="text-gray-300">(555) 123-4567</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 flex items-center justify-center mr-3">
+                  <i class="ri-mail-line"></i>
+                </div>
+                <span class="text-gray-300">contact@mindwell.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t border-gray-700 text-center text-gray-400 text-sm"
+        >
+          <p class="mb-4">© 2025 MindWell. All rights reserved.</p>
+          <div class="flex justify-center space-x-6">
+            <a href="#" class="hover:text-white transition">Privacy Policy</a>
+            <a href="#" class="hover:text-white transition">Terms of Service</a>
+            <a href="#" class="hover:text-white transition">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Filter dropdowns
+        const filterButtons = document.querySelectorAll(
+          "#resourceTypeFilter button, #topicFilter button, #formatFilter button, #sortFilter button",
+        );
+        const filterDropdowns = document.querySelectorAll(".filter-dropdown");
+        filterButtons.forEach((button, index) => {
+          button.addEventListener("click", function () {
+            filterDropdowns[index].classList.toggle("active");
+            // Close other dropdowns
+            filterDropdowns.forEach((dropdown, dropdownIndex) => {
+              if (dropdownIndex !== index) {
+                dropdown.classList.remove("active");
+              }
+            });
+          });
+        });
+        // Close dropdowns when clicking outside
+        document.addEventListener("click", function (event) {
+          const isFilterButton = Array.from(filterButtons).some((button) =>
+            button.contains(event.target),
+          );
+          const isFilterDropdown = Array.from(filterDropdowns).some((dropdown) =>
+            dropdown.contains(event.target),
+          );
+          if (!isFilterButton && !isFilterDropdown) {
+            filterDropdowns.forEach((dropdown) => {
+              dropdown.classList.remove("active");
+            });
+          }
+        });
+        // Reset filters
+        const resetFiltersButton = document.getElementById("resetFilters");
+        if (resetFiltersButton) {
+          resetFiltersButton.addEventListener("click", function () {
+            const filterCheckboxes = document.querySelectorAll(".filter-checkbox");
+            filterCheckboxes.forEach((checkbox) => {
+              checkbox.checked = false;
+            });
+            // Reset radio buttons to default (first option)
+            const sortRadios = document.querySelectorAll('input[name="sort"]');
+            if (sortRadios.length > 0) {
+              sortRadios[0].checked = true;
+            }
+            // Clear search input
+            const searchInput = document.querySelector(
+              'input[type="text"][placeholder="Search for resources..."]',
+            );
+            if (searchInput) {
+              searchInput.value = "";
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
