@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>Book Your Appointment</h1>
+            <p>Schedule a session with a certified psychologist</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="booking-container">
+
+            <!-- Left: Psychologist Selection -->
+            <div class="psychologist-section">
+                <h2>Select a Psychologist</h2>
+
+                <div class="psychologist-list">
+                    <div class="psychologist-card" onclick="selectPsychologist(event, 'Dr. Sarah Johnson')">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Dr. Sarah Johnson">
+                        <div>
+                            <h3>Dr. Sarah Johnson</h3>
+                            <p class="specialty">Anxiety & Depression Specialist</p>
+                            <p class="experience">15+ years experience</p>
+                            <p class="rating">⭐ 4.9 (127 reviews)</p>
+                            <p class="bio">Dr. Johnson is an expert in Cognitive Behavioral Therapy (CBT), helping patients manage anxiety, stress, and depression through proven therapeutic techniques.</p>
+                        </div>
+                    </div>
+
+                    <div class="psychologist-card" onclick="selectPsychologist(event, 'Dr. Michael Chen')">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Dr. Michael Chen">
+                        <div>
+                            <h3>Dr. Michael Chen</h3>
+                            <p class="specialty">PTSD & Trauma Recovery</p>
+                            <p class="experience">12+ years experience</p>
+                            <p class="rating">⭐ 4.8 (93 reviews)</p>
+                            <p class="bio">Dr. Chen specializes in trauma recovery, helping patients suffering from PTSD, military trauma, and emotional distress regain stability.</p>
+                        </div>
+                    </div>
+
+                    <div class="psychologist-card" onclick="selectPsychologist(event, 'Dr. Emily Rodriguez')">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Dr. Emily Rodriguez">
+                        <div>
+                            <h3>Dr. Emily Rodriguez</h3>
+                            <p class="specialty">Mindfulness & Stress Management</p>
+                            <p class="experience">10+ years experience</p>
+                            <p class="rating">⭐ 4.7 (108 reviews)</p>
+                            <p class="bio">Dr. Rodriguez is a certified expert in mindfulness, meditation, and stress management, helping professionals and students achieve work-life balance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Booking Form -->
+            <div class="appointment-form">
+                <h2>Book Your Session</h2>
+                <form id="appointmentForm">
+                    <p><strong>Selected Psychologist:</strong> <span id="selected-psychologist">None</span></p>
+                             
+
+                    <!-- Calendar Date Selection -->
+                    <label>Select Date</label>
+                    <input type="date" id="appointment-date" name="date" required>
+
+                    <!-- Time Selection -->
+                    <label>Select Time</label>
+                    <div class="time-selection">
+                        <button type="button" class="time-button" onclick="selectTime(this)">9:00 AM</button>
+                        <button type="button" class="time-button" onclick="selectTime(this)">10:00 AM</button>
+                        <button type="button" class="time-button" onclick="selectTime(this)">11:00 AM</button>
+                        <button type="button" class="time-button" onclick="selectTime(this)">1:00 PM</button>
+                        <button type="button" class="time-button" onclick="selectTime(this)">2:00 PM</button>
+                        <button type="button" class="time-button" onclick="selectTime(this)">3:00 PM</button>
+                        <button type="button" class="time-button" onclick="selectTime(this)">4:00 PM</button>
+                        <button type="button" class="time-button" onclick="selectTime(this)">5:00 PM</button>
+                        <button type="button" class="time-button" onclick="selectTime(this)">6:00 PM</button>
+                    </div>
+
+                    <!-- User Information -->
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <button type="submit" class="submit-button">Confirm Appointment</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
